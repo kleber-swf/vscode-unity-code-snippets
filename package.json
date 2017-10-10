@@ -1,0 +1,46 @@
+{
+    "name": "unity-better-snippets",
+    "displayName": "Unity Better Snippets",
+    "description": "All snippets you need for Unity3D development",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kleber-swf/vscode-better-unity-snippets"
+    },
+    "author": {
+        "name": "Kleber Silva",
+        "email": "kleber.swf@gmail.com",
+        "url": "http://kleber-swf.com"
+    },
+    "bugs": {
+        "url": "https://github.com/kleber-swf/vscode-better-unity-snippets",
+        "email": "kleber.swf@gmail.com"
+    },
+    "publisher": "kleber-swf",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "snippet",
+        "unity",
+        "unity3d",
+        "monobehaviour",
+        "tools",
+        "gamedev"
+    ],
+    "homepage": "https://github.com/kleber-swf/vscode-better-unity-snippets",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "csharp",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "scripts": {
+        "build": "vsce package"
+    }
+}
