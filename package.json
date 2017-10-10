@@ -1,11 +1,11 @@
 {
-    "name": "unity-better-snippets",
-    "displayName": "Unity Better Snippets",
+    "name": "unity-code-snippets",
+    "displayName": "Unity code Snippets",
     "description": "All snippets you need for Unity3D development",
     "version": "1.0.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/kleber-swf/vscode-better-unity-snippets"
+        "url": "https://github.com/kleber-swf/vscode-code-unity-snippets"
     },
     "author": {
         "name": "Kleber Silva",
@@ -13,7 +13,7 @@
         "url": "http://kleber-swf.com"
     },
     "bugs": {
-        "url": "https://github.com/kleber-swf/vscode-better-unity-snippets",
+        "url": "https://github.com/kleber-swf/vscode-code-unity-snippets",
         "email": "kleber.swf@gmail.com"
     },
     "publisher": "kleber-swf",
@@ -24,14 +24,13 @@
         "Snippets"
     ],
     "keywords": [
-        "snippet",
         "unity",
-        "unity3d",
         "monobehaviour",
-        "tools",
-        "gamedev"
+        "csharp",
+        "gamedev",
+        "snippet"
     ],
-    "homepage": "https://github.com/kleber-swf/vscode-better-unity-snippets",
+    "homepage": "https://github.com/kleber-swf/vscode-code-unity-snippets",
     "icon": "images/icon.png",
     "galleryBanner": {
         "color": "#b5bcca",
