@@ -32,6 +32,11 @@
         "gamedev"
     ],
     "homepage": "https://github.com/kleber-swf/vscode-better-unity-snippets",
+    "icon": "images/icon.png",
+    "galleryBanner": {
+        "color": "#b5bcca",
+        "theme": "light"
+    },
     "contributes": {
         "snippets": [
             {
