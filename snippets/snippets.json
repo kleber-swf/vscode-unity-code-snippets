@@ -1,9 +1,4 @@
 {
-	"Protected Serialize Field": {
-		"prefix": "sprotected",
-		"description": "Protected Serialized Field.",
-		"body": "[SerializeField] protected $1 $0;"
-	},
 	"Unity MonoBehaviour": {
 		"prefix": "MonoBehaviour",
 		"description": "Unity MonoBehaviour class template.",
@@ -22,7 +17,7 @@
 			"using UnityEngine;",
 			"",
 			"public class ${TM_FILENAME_BASE} : StateMachineBehaviour {",
-			"\toverride public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {",
+			"\tpublic override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {",
 			"\t\t$0",
 			"\t}",
 			"}"
@@ -47,7 +42,7 @@
 			"using UnityEngine;",
 			"using UnityEditor;",
 			"",
-			"[CreateAssetMenu(fileName = \"${2:FileName}\", menuName = \"${3:MenuName}\", order = ${4:0})]",
+			"[CreateAssetMenu(fileName = \"${1:${TM_FILENAME_BASE}}\", menuName = \"${2:${TM_FILEPATH/.*\\\\(.*)\\\\Assets\\\\.*/${1}/}/${TM_FILENAME_BASE}}\", order = ${3:0})]",
 			"public class ${TM_FILENAME_BASE} : ScriptableObject {",
 			"\t$0",
 			"}"
@@ -60,7 +55,7 @@
 			"using UnityEngine;",
 			"using UnityEditor;",
 			"",
-			"[CustomEditor(typeof(${1:Type}))]",
+			"[CustomEditor(typeof(${1:${TM_FILENAME_BASE/(.*)Editor/${1}/}}))]",
 			"public class ${TM_FILENAME_BASE} : Editor {",
 			"\tpublic override void OnInspectorGUI() {",
 			"\t\tbase.OnInspectorGUI();",
@@ -76,8 +71,9 @@
 			"using UnityEngine;",
 			"using UnityEditor;",
 			"",
-			"public class ${TM_FILENAME_BASE}/} : EditorWindow {",
-			"\t[MenuItem(\"Custom/${TM_FILENAME_BASE}\")]",
+			"public class ${TM_FILENAME_BASE} : EditorWindow {",
+			"",
+			"\t[MenuItem(\"${1:${TM_FILEPATH/.*\\\\(.*)\\\\Assets\\\\.*/${1}/}/${TM_FILENAME_BASE/(.*)Editor/${1}/}}\")]",
 			"\tprivate static void ShowWindow() {",
 			"\t\tGetWindow<${TM_FILENAME_BASE}>().Show();",
 			"\t}",
@@ -89,13 +85,13 @@
 		]
 	},
 	"Unity CustomInspector": {
-		"prefix": "CustomInspector",
-		"description": "Unity CustomInspector class template.",
+		"prefix": "PropertyDrawer",
+		"description": "Unity PropertyDrawer class template.",
 		"body": [
 			"using UnityEngine;",
 			"using UnityEditor;",
 			"",
-			"[CustomPropertyDrawer(typeof(${1:Type}))]",
+			"[CustomPropertyDrawer(typeof(${1:${TM_FILENAME_BASE/(.*)Drawer/${1}/}}))]",
 			"public class ${TM_FILENAME_BASE}: PropertyDrawer {",
 			"\tpublic override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {",
 			"\t\t$0",
@@ -111,9 +107,10 @@
 			"using UnityEditor;",
 			"",
 			"public class ${TM_FILENAME_BASE}: ScriptableWizard {",
-			"\t[MenuItem(\"Custom/${1:MenuItem}\")]",
+			"",
+			"\t[MenuItem(\"${1:${TM_FILEPATH/.*\\\\(.*)\\\\Assets\\\\.*/${1}/}/${TM_FILENAME_BASE/(.*)Wizard/${1}/}}\")]",
 			"\tprivate static void MenuEntryCall() {",
-			"\t\tDisplayWizard(\"Title\", typeof(${2:Type}), \"Button\");",
+			"\t\tDisplayWizard<${TM_FILENAME_BASE}>(\"${2:Title}\");",
 			"\t}",
 			"",
 			"\tprivate void OnWizardCreate() {",
