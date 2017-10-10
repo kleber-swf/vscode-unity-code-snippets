@@ -97,7 +97,7 @@ It takes advantage of Visual Studio Code snippets features such as [snippets tra
 	* Debug.LogWarning()
 	* Debug.LogException()
 
-If you have any suggestions, [open an issue in the Github project](https://github.com/kleber-swf/vscode-code-unity-snippets/issues) page and I'll add it as soon as I can :).
+If you have any suggestions, [open an issue in the Github project](https://github.com/kleber-swf/vscode-unity-code-snippets/issues) page and I'll add it as soon as I can :).
 
 If you like the color theme of the previews, you can download it here: [Base16 Ocean Dark Extended Theme](https://marketplace.visualstudio.com/items?itemName=kleber-swf.ocean-dark-extended).
 

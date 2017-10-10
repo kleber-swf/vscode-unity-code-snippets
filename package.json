@@ -1,11 +1,11 @@
 {
     "name": "unity-code-snippets",
-    "displayName": "Unity code Snippets",
+    "displayName": "Unity Code Snippets",
     "description": "All snippets you need for Unity3D development",
     "version": "1.0.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/kleber-swf/vscode-code-unity-snippets"
+        "url": "https://github.com/kleber-swf/vscode-unity-code-snippets"
     },
     "author": {
         "name": "Kleber Silva",
@@ -13,7 +13,7 @@
         "url": "http://kleber-swf.com"
     },
     "bugs": {
-        "url": "https://github.com/kleber-swf/vscode-code-unity-snippets",
+        "url": "https://github.com/kleber-swf/vscode-unity-code-snippets",
         "email": "kleber.swf@gmail.com"
     },
     "publisher": "kleber-swf",
@@ -30,7 +30,7 @@
         "gamedev",
         "snippet"
     ],
-    "homepage": "https://github.com/kleber-swf/vscode-code-unity-snippets",
+    "homepage": "https://github.com/kleber-swf/vscode-unity-code-snippets",
     "icon": "images/icon.png",
     "galleryBanner": {
         "color": "#b5bcca",
