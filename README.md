@@ -1,10 +1,10 @@
 # Unity Code Snippets #
 
 Creating a MonoBehaviour easily.
-![MonoBehaviour](images/usage-01.gif)
+![MonoBehaviour](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-01.gif)
 
 Create an Editor class as easy as it can be.
-![Unity Editor](images/usage-02.gif)
+![Unity Editor](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-02.gif)
 
 ## Features
 
