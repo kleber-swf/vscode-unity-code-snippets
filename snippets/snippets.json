@@ -84,7 +84,7 @@
 			"}"
 		]
 	},
-	"Unity CustomInspector": {
+	"Unity PropertyDrawer": {
 		"prefix": "PropertyDrawer",
 		"description": "Unity PropertyDrawer class template.",
 		"body": [
@@ -685,5 +685,25 @@
 			"\t$0",
 			"}"
 		]
+	},
+	"Debug Log": {
+		"prefix": "Log",
+		"description": "Unity Debug.Log() method",
+		"body": "Debug.Log($0);"
+	},
+	"Debug Log Error": {
+		"prefix": "LogError",
+		"description": "Unity Debug.LogError() method",
+		"body": "Debug.LogError($0);"
+	},
+	"Debug Log Warning": {
+		"prefix": "LogWarning",
+		"description": "Unity Debug.LogWarning() method",
+		"body": "Debug.LogWarning($0);"
+	},
+	"Debug Log Exception": {
+		"prefix": "LogException",
+		"description": "Unity Debug.LogException() method",
+		"body": "Debug.LogException($0);"
 	}
 }
