@@ -1,65 +1,104 @@
-# unity-better-snippets README
+# Unity Better Snippets #
 
-This is the README for your extension "unity-better-snippets". After writing up a brief description, we recommend including the following sections.
+Creating a MonoBehaviour easily.
+![MonoBehaviour](images/usage-01.gif)
+
+Create an Editor class as easy as it can be.
+![Unity Editor](images/usage-02.gif)
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+All Unity code snippets you need. This extension intends to be the most complete collection of Unity snippets for Visual Studio Code.
 
-For example if there is an image subfolder under your extension project workspace:
+It takes advantage of Visual Studio Code snippets features such as [snippets transforms](https://code.visualstudio.com/updates/v1_17#_snippet-transforms) to create the code faster for you.
 
-\!\[feature X\]\(images/feature-x.png\)
+## All the snippets
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+* Game classes:
+	* MonoBehaviour
+	* StateMachineBehaviour
+	* NetworkBehaviour
+	* ScriptableObject
 
-## Requirements
+* Editor Classes:
+	* Editor
+	* EditorWindow
+	* PropertyDrawer
+	* ScriptableWizard
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+* MonoBehaviour Methods:
+	* Awake()
+	* FixedUpdate()
+	* LateUpdate()
+	* OnAnimatorIK()
+	* OnAnimatorMove()
+	* OnApplicationFocus()
+	* OnApplicationPause()
+	* OnApplicationQuit()
+	* OnAudioFilterRead()
+	* OnBecameInvisible()
+	* OnBecameVisible()
+	* OnCollisionEnter()
+	* OnCollisionEnter2D()
+	* OnCollisionExit()
+	* OnCollisionExit2D()
+	* OnCollisionStay()
+	* OnCollisionStay2D()
+	* OnConnectedToServer()
+	* OnControllerColliderHit()
+	* OnDestroy()
+	* OnDisable()
+	* OnDisconnectedFromServer()
+	* OnDrawGizmos()
+	* OnDrawGizmosSelected()
+	* OnEnable()
+	* OnFailedToConnect()
+	* OnFailedToConnectToMasterServer()
+	* OnGUI()
+	* OnJointBreak()
+	* OnJointBreak2D()
+	* OnMasterServerEvent()
+	* OnMouseDown()
+	* OnMouseDrag()
+	* OnMouseEnter()
+	* OnMouseExit()
+	* OnMouseOver()
+	* OnMouseUp()
+	* OnMouseUpAsButton()
+	* OnNetworkInstantiate()
+	* OnParticleCollision()
+	* OnParticleTrigger()
+	* OnPlayerConnected()
+	* OnPlayerDisconnected()
+	* OnPostRender()
+	* OnPreCull()
+	* OnPreRender()
+	* OnRenderImage()
+	* OnRenderObject()
+	* OnSerializeNetworkView()
+	* OnServerInitialized()
+	* OnTransformChildrenChanged()
+	* OnTransformParentChanged()
+	* OnTriggerEnter()
+	* OnTriggerEnter2D()
+	* OnTriggerExit()
+	* OnTriggerExit2D()
+	* OnTriggerStay()
+	* OnTriggerStay2D()
+	* OnValidate()
+	* OnWillRenderObject()
+	* Reset()
+	* Start()
+	* Update()
 
-## Extension Settings
+* Some useful code snippets:
+	* Debug.Log()
+	* Debug.LogError()
+	* Debug.LogWarning()
+	* Debug.LogException()
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+If you have any suggestions, [open an issue in the Github project](https://github.com/kleber-swf/vscode-better-unity-snippets/issues) page and I'll add it as soon as I can :).
 
-For example:
+If you like the color theme of the previews, you can download it here: [Base16 Ocean Dark Extended Theme](https://marketplace.visualstudio.com/items?itemName=kleber-swf.ocean-dark-extended).
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Thanks you for downloading this extension.
