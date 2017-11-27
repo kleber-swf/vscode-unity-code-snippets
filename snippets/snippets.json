@@ -40,7 +40,6 @@
 		"description": "Unity ScriptableObject class template.",
 		"body": [
 			"using UnityEngine;",
-			"using UnityEditor;",
 			"",
 			"[CreateAssetMenu(fileName = \"${1:${TM_FILENAME_BASE}}\", menuName = \"${2:${TM_FILEPATH/.*\\\\(.*)\\\\Assets\\\\.*/${1}/}/${TM_FILENAME_BASE}}\", order = ${3:0})]",
 			"public class ${TM_FILENAME_BASE} : ScriptableObject {",
