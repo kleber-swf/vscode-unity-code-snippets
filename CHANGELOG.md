@@ -6,12 +6,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.1] - 2018-06-08
+### Changed
+- Icon updated to be more visible at extensions panel inside VSCode
+- Readme updated: added a new usage gif - ScriptableObject
+
+### Fixed
+- Added private modifier to FixedUpdate method
+
+
 ## [1.1.0] - 2017-11-17
 ### Fixed
 - Removed useless "using UnityEditor" inside ScriptableObject
 
+
 ## [1.0.0] - 2017-10-10
 - Initial release
 
+
 [Unreleased]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/master
+[1.2.1]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/v1.2.1
+[1.1.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/v1.1.0
 [1.0.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/v1.0.0
