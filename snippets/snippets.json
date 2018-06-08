@@ -131,7 +131,7 @@
 		"prefix": "FixedUpdate()",
 		"description": "This function is called every fixed framerate frame, if the MonoBehaviour is enabled.",
 		"body": [
-			"void FixedUpdate() {",
+			"private void FixedUpdate() {",
 			"\t$0",
 			"}"
 		]
