@@ -1,12 +1,16 @@
 # Unity Code Snippets #
 
-Creating a MonoBehaviour easily.
+Create MonoBehaviours easily.
 
 ![MonoBehaviour](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-01.gif)
 
 Create an Editor class as easy as it can be.
 
 ![Unity Editor](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-02.gif)
+
+You never remember the property that goes with the ScriptableObject to create it via Unity create menu? Not a problem.
+
+![ScriptableObject](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-03.gif)
 
 ## Features
 
