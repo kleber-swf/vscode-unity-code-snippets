@@ -28,7 +28,7 @@ It takes advantage of Visual Studio Code snippets features such as [snippets tra
 
 * Editor Classes:
 	* Editor
-	* :sparkles: Editor with Reorderable List
+	* Editor with Reorderable List **_(NEW)_**
 	* EditorWindow
 	* PropertyDrawer
 	* ScriptableWizard
