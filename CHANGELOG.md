@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.2] - 2018-07-23
+### Added
+- New snippet: Editor with Reorderable List. Creates an editor boilerplate code with a reorderable list ready to be used.
+
 ## [1.2.1] - 2018-06-08
 ### Changed
 - Icon updated to be more visible at extensions panel inside VSCode
@@ -21,7 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [1.0.0] - 2017-10-10
-- Initial release
+- :tada: Initial release
 
 
 [Unreleased]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/master
