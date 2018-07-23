@@ -1,108 +1,125 @@
 # Unity Code Snippets #
-
-Create MonoBehaviours easily.
-
-![MonoBehaviour](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-01.gif)
-
-Create an Editor class as easy as it can be.
-
-![Unity Editor](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-02.gif)
-
-You never remember the property that goes with the ScriptableObject to create it via Unity create menu? Not a problem.
-
-![ScriptableObject](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-03.gif)
+Create Unity classes and methods easily.
 
 ## Features
 
-All Unity code snippets you need. This extension intends to be the most complete collection of Unity snippets for Visual Studio Code.
+All Unity code snippets you need. This extension intends to be the complete collection of Unity snippets for Visual Studio Code.
 
-It takes advantage of Visual Studio Code snippets features such as [snippets transforms](https://code.visualstudio.com/updates/v1_17#_snippet-transforms) to create the code faster for you.
+It takes advantage of latest Visual Studio Code snippets features to create the code faster for you.
+
+### MonoBehaviour
+Create game classes like `MonoBehaviours`, `NetworkBehaviours` and `StateMachineBehaviours` easily. Also create common methods like `Start()`, `Update()` or `OnTriggerEnter2D()` and log calls.
+
+![MonoBehaviour](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-01.gif)
+
+### Editor
+Create an Editor classes like `Editor`, `EditorWindow` and `PropertyDrawer` as easy as it can be.
+
+![Unity Editor](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-02.gif)
+
+### ScriptableObject
+You never remember the property that goes with the `ScriptableObject` to create it via Unity create menu? Not a problem.
+
+![ScriptableObject](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-03.gif)
+
+## Instalation
+
+As in any Visual Studio Code Extension you have several options to install:
+
+* Enter the Visual Studio Code Marketplace, search for _Unity Code Snippets_ (or enter directly on [the extension page](https://marketplace.visualstudio.com/items?itemName=kleber-swf.unity-code-snippets)) and click on _Install_ button.
+* Inside Visual Studio Code, enter in the Extensios panel, search for _Unity Code Snippets_ and click on _Install_ button
+* Run the following command in the Command Palette:
+	```
+	ext install kleber-swf.unity-code-snippets
+	```
 
 ## All the snippets
 
+Start typing the names to create the corresponding snippets.
+
 * Game classes:
-	* MonoBehaviour
-	* StateMachineBehaviour
-	* NetworkBehaviour
-	* ScriptableObject
+	* `MonoBehaviour`
+	* `StateMachineBehaviour`
+	* `NetworkBehaviour`
+	* `ScriptableObject`
 
 * Editor Classes:
-	* Editor
-	* Editor with Reorderable List **_(NEW)_**
-	* EditorWindow
-	* PropertyDrawer
-	* ScriptableWizard
+	* `Editor`
+	* `Editor with Reorderable List` **_(NEW)_**
+	* `EditorWindow`
+	* `PropertyDrawer`
+	* `ScriptableWizard`
 
 * MonoBehaviour Methods:
-	* Awake()
-	* FixedUpdate()
-	* LateUpdate()
-	* OnAnimatorIK()
-	* OnAnimatorMove()
-	* OnApplicationFocus()
-	* OnApplicationPause()
-	* OnApplicationQuit()
-	* OnAudioFilterRead()
-	* OnBecameInvisible()
-	* OnBecameVisible()
-	* OnCollisionEnter()
-	* OnCollisionEnter2D()
-	* OnCollisionExit()
-	* OnCollisionExit2D()
-	* OnCollisionStay()
-	* OnCollisionStay2D()
-	* OnConnectedToServer()
-	* OnControllerColliderHit()
-	* OnDestroy()
-	* OnDisable()
-	* OnDisconnectedFromServer()
-	* OnDrawGizmos()
-	* OnDrawGizmosSelected()
-	* OnEnable()
-	* OnFailedToConnect()
-	* OnFailedToConnectToMasterServer()
-	* OnGUI()
-	* OnJointBreak()
-	* OnJointBreak2D()
-	* OnMasterServerEvent()
-	* OnMouseDown()
-	* OnMouseDrag()
-	* OnMouseEnter()
-	* OnMouseExit()
-	* OnMouseOver()
-	* OnMouseUp()
-	* OnMouseUpAsButton()
-	* OnNetworkInstantiate()
-	* OnParticleCollision()
-	* OnParticleTrigger()
-	* OnPlayerConnected()
-	* OnPlayerDisconnected()
-	* OnPostRender()
-	* OnPreCull()
-	* OnPreRender()
-	* OnRenderImage()
-	* OnRenderObject()
-	* OnSerializeNetworkView()
-	* OnServerInitialized()
-	* OnTransformChildrenChanged()
-	* OnTransformParentChanged()
-	* OnTriggerEnter()
-	* OnTriggerEnter2D()
-	* OnTriggerExit()
-	* OnTriggerExit2D()
-	* OnTriggerStay()
-	* OnTriggerStay2D()
-	* OnValidate()
-	* OnWillRenderObject()
-	* Reset()
-	* Start()
-	* Update()
+	* `Awake()`
+	* `FixedUpdate()`
+	* `LateUpdate()`
+	* `OnAnimatorIK()`
+	* `OnAnimatorMove()`
+	* `OnApplicationFocus()`
+	* `OnApplicationPause()`
+	* `OnApplicationQuit()`
+	* `OnAudioFilterRead()`
+	* `OnBecameInvisible()`
+	* `OnBecameVisible()`
+	* `OnCollisionEnter()`
+	* `OnCollisionEnter2D()`
+	* `OnCollisionExit()`
+	* `OnCollisionExit2D()`
+	* `OnCollisionStay()`
+	* `OnCollisionStay2D()`
+	* `OnConnectedToServer()`
+	* `OnControllerColliderHit()`
+	* `OnDestroy()`
+	* `OnDisable()`
+	* `OnDisconnectedFromServer()`
+	* `OnDrawGizmos()`
+	* `OnDrawGizmosSelected()`
+	* `OnEnable()`
+	* `OnFailedToConnect()`
+	* `OnFailedToConnectToMasterServer()`
+	* `OnGUI()`
+	* `OnJointBreak()`
+	* `OnJointBreak2D()`
+	* `OnMasterServerEvent()`
+	* `OnMouseDown()`
+	* `OnMouseDrag()`
+	* `OnMouseEnter()`
+	* `OnMouseExit()`
+	* `OnMouseOver()`
+	* `OnMouseUp()`
+	* `OnMouseUpAsButton()`
+	* `OnNetworkInstantiate()`
+	* `OnParticleCollision()`
+	* `OnParticleTrigger()`
+	* `OnPlayerConnected()`
+	* `OnPlayerDisconnected()`
+	* `OnPostRender()`
+	* `OnPreCull()`
+	* `OnPreRender()`
+	* `OnRenderImage()`
+	* `OnRenderObject()`
+	* `OnSerializeNetworkView()`
+	* `OnServerInitialized()`
+	* `OnTransformChildrenChanged()`
+	* `OnTransformParentChanged()`
+	* `OnTriggerEnter()`
+	* `OnTriggerEnter2D()`
+	* `OnTriggerExit()`
+	* `OnTriggerExit2D()`
+	* `OnTriggerStay()`
+	* `OnTriggerStay2D()`
+	* `OnValidate()`
+	* `OnWillRenderObject()`
+	* `Reset()`
+	* `Start()`
+	* `Update()`
 
 * Some useful code snippets:
-	* Debug.Log()
-	* Debug.LogError()
-	* Debug.LogWarning()
-	* Debug.LogException()
+	* `Debug.Log()` (type _`log`_)
+	* `Debug.LogError()` (type _`logerror`_)
+	* `Debug.LogWarning()` (type _`logwarning`_)
+	* `Debug.LogException()`  (type _`logexception`_)
 
 If you have any suggestions, [open an issue in the Github project](https://github.com/kleber-swf/vscode-unity-code-snippets/issues) page and I'll add it as soon as I can :).
 
