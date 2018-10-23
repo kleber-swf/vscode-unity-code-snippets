@@ -162,7 +162,7 @@
 		"prefix": "Awake()",
 		"description": "Awake is called when the script instance is being loaded.",
 		"body": [
-			"private void Awake() {",
+			"protected void Awake() {",
 			"\t$0",
 			"}"
 		]
@@ -171,7 +171,7 @@
 		"prefix": "FixedUpdate()",
 		"description": "This function is called every fixed framerate frame, if the MonoBehaviour is enabled.",
 		"body": [
-			"private void FixedUpdate() {",
+			"protected void FixedUpdate() {",
 			"\t$0",
 			"}"
 		]
@@ -180,7 +180,7 @@
 		"prefix": "LateUpdate()",
 		"description": "LateUpdate is called every frame, if the Behaviour is enabled. It is called after all Update functions have been called.",
 		"body": [
-			"private void LateUpdate() {",
+			"protected void LateUpdate() {",
 			"\t$0",
 			"}"
 		]
@@ -189,7 +189,7 @@
 		"prefix": "OnAnimatorIK(int)",
 		"description": "Callback for setting up animation IK (inverse kinematics).",
 		"body": [
-			"private void OnAnimatorIK(int layerIndex) {",
+			"protected void OnAnimatorIK(int layerIndex) {",
 			"\t$0",
 			"}"
 		]
@@ -198,7 +198,7 @@
 		"prefix": "OnAnimatorMove()",
 		"description": "Callback for processing animation movements for modifying root motion.",
 		"body": [
-			"private void OnAnimatorMove() {",
+			"protected void OnAnimatorMove() {",
 			"\t$0",
 			"}"
 		]
@@ -207,7 +207,7 @@
 		"prefix": "OnApplicationFocus(bool)",
 		"description": "Callback sent to all game objects when the player gets or loses focus.",
 		"body": [
-			"private void OnApplicationFocus(bool focusStatus) {",
+			"protected void OnApplicationFocus(bool focusStatus) {",
 			"\t$0",
 			"}"
 		]
@@ -216,7 +216,7 @@
 		"prefix": "OnApplicationPause(bool)",
 		"description": "Callback sent to all game objects when the player pauses.",
 		"body": [
-			"private void OnApplicationPause(bool pauseStatus) {",
+			"protected void OnApplicationPause(bool pauseStatus) {",
 			"\t$0",
 			"}"
 		]
@@ -225,7 +225,7 @@
 		"prefix": "OnApplicationQuit()",
 		"description": "Callback sent to all game objects before the application is quit.",
 		"body": [
-			"private void OnApplicationQuit() {",
+			"protected void OnApplicationQuit() {",
 			"\t$0",
 			"}"
 		]
@@ -234,7 +234,7 @@
 		"prefix": "OnAudioFilterRead(float[], int)",
 		"description": "If OnAudioFilterRead is implemented, Unity will insert a custom filter into the audio DSP chain.",
 		"body": [
-			"private void OnAudioFilterRead(float[] data, int channels) {",
+			"protected void OnAudioFilterRead(float[] data, int channels) {",
 			"\t$0",
 			"}"
 		]
@@ -243,7 +243,7 @@
 		"prefix": "OnBecameInvisible()",
 		"description": "OnBecameInvisible is called when the renderer is no longer visible by any camera.",
 		"body": [
-			"private void OnBecameInvisible() {",
+			"protected void OnBecameInvisible() {",
 			"\t$0",
 			"}"
 		]
@@ -252,7 +252,7 @@
 		"prefix": "OnBecameVisible()",
 		"description": "OnBecameVisible is called when the renderer became visible by any camera.",
 		"body": [
-			"private void OnBecameVisible() {",
+			"protected void OnBecameVisible() {",
 			"\t$0",
 			"}"
 		]
@@ -261,7 +261,7 @@
 		"prefix": "OnCollisionEnter(Collision)",
 		"description": "OnCollisionEnter is called when this collider/rigidbody has begun\n touching another rigidbody/collider.",
 		"body": [
-			"private void OnCollisionEnter(Collision other) {",
+			"protected void OnCollisionEnter(Collision other) {",
 			"\t$0",
 			"}"
 		]
@@ -270,7 +270,7 @@
 		"prefix": "OnCollisionEnter2D(Collision2D)",
 		"description": "Sent when an incoming collider makes contact with this object's collider (2D physics only).",
 		"body": [
-			"private void OnCollisionEnter2D(Collision2D other) {",
+			"protected void OnCollisionEnter2D(Collision2D other) {",
 			"\t$0",
 			"}"
 		]
@@ -279,7 +279,7 @@
 		"prefix": "OnCollisionExit(Collision)",
 		"description": "OnCollisionExit is called when this collider/rigidbody has stopped touching another rigidbody/collider.",
 		"body": [
-			"private void OnCollisionExit(Collision other) {",
+			"protected void OnCollisionExit(Collision other) {",
 			"\t$0",
 			"}"
 		]
@@ -288,7 +288,7 @@
 		"prefix": "OnCollisionExit2D(Collision2D)",
 		"description": "Sent when a collider on another object stops touching this object's collider (2D physics only).",
 		"body": [
-			"private void OnCollisionExit2D(Collision2D other) {",
+			"protected void OnCollisionExit2D(Collision2D other) {",
 			"\t$0",
 			"}"
 		]
@@ -297,7 +297,7 @@
 		"prefix": "OnCollisionStay(Collision)",
 		"description": "OnCollisionStay is called once per frame for every collider/rigidbody that is touching rigidbody/collider.",
 		"body": [
-			"private void OnCollisionStay(Collision other) {",
+			"protected void OnCollisionStay(Collision other) {",
 			"\t$0",
 			"}"
 		]
@@ -306,7 +306,7 @@
 		"prefix": "OnCollisionStay2D(Collision2D)",
 		"description": "Sent each frame where a collider on another object is touching this object's collider (2D physics only).",
 		"body": [
-			"private void OnCollisionStay2D(Collision2D other) {",
+			"protected void OnCollisionStay2D(Collision2D other) {",
 			"\t$0",
 			"}"
 		]
@@ -315,7 +315,7 @@
 		"prefix": "OnConnectedToServer()",
 		"description": "Called on the client when you have successfully connected to a server.",
 		"body": [
-			"private void OnConnectedToServer() {",
+			"protected void OnConnectedToServer() {",
 			"\t$0",
 			"}"
 		]
@@ -324,7 +324,7 @@
 		"prefix": "OnControllerColliderHit(ControllerColliderHit)",
 		"description": "OnControllerColliderHit is called when the controller hits a collider while performing a Move.",
 		"body": [
-			"private void OnControllerColliderHit(ControllerColliderHit hit) {",
+			"protected void OnControllerColliderHit(ControllerColliderHit hit) {",
 			"\t$0",
 			"}"
 		]
@@ -333,7 +333,7 @@
 		"prefix": "OnDestroy()",
 		"description": "This function is called when the MonoBehaviour will be destroyed.",
 		"body": [
-			"private void OnDestroy() {",
+			"protected void OnDestroy() {",
 			"\t$0",
 			"}"
 		]
@@ -342,7 +342,7 @@
 		"prefix": "OnDisable()",
 		"description": "This function is called when the behaviour becomes disabled or inactive.",
 		"body": [
-			"private void OnDisable() {",
+			"protected void OnDisable() {",
 			"\t$0",
 			"}"
 		]
@@ -351,7 +351,7 @@
 		"prefix": "OnDisconnectedFromServer(NetworkDisconnection)",
 		"description": "Called on the client when the connection was lost or you disconnected from the server.",
 		"body": [
-			"private void OnDisconnectedFromServer(NetworkDisconnection info) {",
+			"protected void OnDisconnectedFromServer(NetworkDisconnection info) {",
 			"\t$0",
 			"}"
 		]
@@ -360,7 +360,7 @@
 		"prefix": "OnDrawGizmos()",
 		"description": "Callback to draw gizmos that are pickable and always drawn.",
 		"body": [
-			"private void OnDrawGizmos() {",
+			"protected void OnDrawGizmos() {",
 			"\t$0",
 			"}"
 		]
@@ -369,7 +369,7 @@
 		"prefix": "OnDrawGizmosSelected()",
 		"description": "Callback to draw gizmos only if the object is selected.",
 		"body": [
-			"private void OnDrawGizmosSelected() {",
+			"protected void OnDrawGizmosSelected() {",
 			"\t$0",
 			"}"
 		]
@@ -378,7 +378,7 @@
 		"prefix": "OnEnable()",
 		"description": "This function is called when the object becomes enabled and active.",
 		"body": [
-			"private void OnEnable() {",
+			"protected void OnEnable() {",
 			"\t$0",
 			"}"
 		]
@@ -387,7 +387,7 @@
 		"prefix": "OnFailedToConnect(NetworkConnectionError)",
 		"description": "Called on the client when a connection attempt fails for some reason.",
 		"body": [
-			"private void OnFailedToConnect(NetworkConnectionError error) {",
+			"protected void OnFailedToConnect(NetworkConnectionError error) {",
 			"\t$0",
 			"}"
 		]
@@ -396,7 +396,7 @@
 		"prefix": "OnFailedToConnectToMasterServer(NetworkConnectionError)",
 		"description": "Called on clients or servers when there is a problem connecting to the MasterServer.",
 		"body": [
-			"private void OnFailedToConnectToMasterServer(NetworkConnectionError error) {",
+			"protected void OnFailedToConnectToMasterServer(NetworkConnectionError error) {",
 			"\t$0",
 			"}"
 		]
@@ -405,7 +405,7 @@
 		"prefix": "OnGUI()",
 		"description": "OnGUI is called for rendering and handling GUI events.",
 		"body": [
-			"private void OnGUI() {",
+			"protected void OnGUI() {",
 			"\t$0",
 			"}"
 		]
@@ -414,7 +414,7 @@
 		"prefix": "OnJointBreak(float)",
 		"description": "Called when a joint attached to the same game object broke.",
 		"body": [
-			"private void OnJointBreak(float breakForce) {",
+			"protected void OnJointBreak(float breakForce) {",
 			"\t$0",
 			"}"
 		]
@@ -423,7 +423,7 @@
 		"prefix": "OnJointBreak2D(Joint2D)",
 		"description": "Called when a Joint2D attached to the same game object breaks.",
 		"body": [
-			"private void OnJointBreak2D(Joint2D brokenJoint) {",
+			"protected void OnJointBreak2D(Joint2D brokenJoint) {",
 			"\t$0",
 			"}"
 		]
@@ -432,7 +432,7 @@
 		"prefix": "OnMasterServerEvent(MasterServerEvent)",
 		"description": "Called on clients or servers when reporting events from the MasterServer.",
 		"body": [
-			"private void OnMasterServerEvent(MasterServerEvent msEvent) {",
+			"protected void OnMasterServerEvent(MasterServerEvent msEvent) {",
 			"\t$0",
 			"}"
 		]
@@ -441,7 +441,7 @@
 		"prefix": "OnMouseDown()",
 		"description": "OnMouseDown is called when the user has pressed the mouse button while over the GUIElement or Collider.",
 		"body": [
-			"private void OnMouseDown() {",
+			"protected void OnMouseDown() {",
 			"\t$0",
 			"}"
 		]
@@ -450,7 +450,7 @@
 		"prefix": "OnMouseDrag()",
 		"description": "OnMouseDrag is called when the user has clicked on a GUIElement or Collider and is still holding down the mouse.",
 		"body": [
-			"private void OnMouseDrag() {",
+			"protected void OnMouseDrag() {",
 			"\t$0",
 			"}"
 		]
@@ -459,7 +459,7 @@
 		"prefix": "OnMouseEnter()",
 		"description": "Called when the mouse enters the GUIElement or Collider.",
 		"body": [
-			"private void OnMouseEnter() {",
+			"protected void OnMouseEnter() {",
 			"\t$0",
 			"}"
 		]
@@ -468,7 +468,7 @@
 		"prefix": "OnMouseExit()",
 		"description": "Called when the mouse is not any longer over the GUIElement or Collider.",
 		"body": [
-			"private void OnMouseExit() {",
+			"protected void OnMouseExit() {",
 			"\t$0",
 			"}"
 		]
@@ -477,7 +477,7 @@
 		"prefix": "OnMouseOver()",
 		"description": "Called every frame while the mouse is over the GUIElement or Collider.",
 		"body": [
-			"private void OnMouseOver() {",
+			"protected void OnMouseOver() {",
 			"\t$0",
 			"}"
 		]
@@ -486,7 +486,7 @@
 		"prefix": "OnMouseUp()",
 		"description": "OnMouseUp is called when the user has released the mouse button.",
 		"body": [
-			"private void OnMouseUp() {",
+			"protected void OnMouseUp() {",
 			"\t$0",
 			"}"
 		]
@@ -495,7 +495,7 @@
 		"prefix": "OnMouseUpAsButton()",
 		"description": "OnMouseUpAsButton is only called when the mouse is released over the same GUIElement or Collider as it was pressed.",
 		"body": [
-			"private void OnMouseUpAsButton() {",
+			"protected void OnMouseUpAsButton() {",
 			"\t$0",
 			"}"
 		]
@@ -504,7 +504,7 @@
 		"prefix": "OnNetworkInstantiate(NetworkMessageInfo)",
 		"description": "Called on objects which have been network instantiated with Network.Instantiate.",
 		"body": [
-			"private void OnNetworkInstantiate(NetworkMessageInfo info) {",
+			"protected void OnNetworkInstantiate(NetworkMessageInfo info) {",
 			"\t$0",
 			"}"
 		]
@@ -513,7 +513,7 @@
 		"prefix": "OnParticleCollision(GameObject)",
 		"description": "OnParticleCollision is called when a particle hits a collider.",
 		"body": [
-			"private void OnParticleCollision(GameObject other) {",
+			"protected void OnParticleCollision(GameObject other) {",
 			"\t$0",
 			"}"
 		]
@@ -522,7 +522,7 @@
 		"prefix": "OnParticleTrigger()",
 		"description": "OnParticleTrigger is called when any particles in a particle system meet the conditions in the trigger module.",
 		"body": [
-			"private void OnParticleTrigger() {",
+			"protected void OnParticleTrigger() {",
 			"\t$0",
 			"}"
 		]
@@ -531,7 +531,7 @@
 		"prefix": "OnPlayerConnected(NetworkPlayer)",
 		"description": "Called on the server whenever a new player has successfully connected.",
 		"body": [
-			"private void OnPlayerConnected(NetworkPlayer player) {",
+			"protected void OnPlayerConnected(NetworkPlayer player) {",
 			"\t$0",
 			"}"
 		]
@@ -540,7 +540,7 @@
 		"prefix": "OnPlayerDisconnected(NetworkPlayer)",
 		"description": "Called on the server whenever a player disconnected from the server.",
 		"body": [
-			"private void OnPlayerDisconnected(NetworkPlayer player) {",
+			"protected void OnPlayerDisconnected(NetworkPlayer player) {",
 			"\t$0",
 			"}"
 		]
@@ -549,7 +549,7 @@
 		"prefix": "OnPostRender()",
 		"description": "OnPostRender is called after a camera finishes rendering the scene.",
 		"body": [
-			"private void OnPostRender() {",
+			"protected void OnPostRender() {",
 			"\t$0",
 			"}"
 		]
@@ -558,7 +558,7 @@
 		"prefix": "OnPreCull()",
 		"description": "OnPreCull is called before a camera culls the scene.",
 		"body": [
-			"private void OnPreCull() {",
+			"protected void OnPreCull() {",
 			"\t$0",
 			"}"
 		]
@@ -567,7 +567,7 @@
 		"prefix": "OnPreRender()",
 		"description": "OnPreRender is called before a camera starts rendering the scene.",
 		"body": [
-			"private void OnPreRender() {",
+			"protected void OnPreRender() {",
 			"\t$0",
 			"}"
 		]
@@ -576,7 +576,7 @@
 		"prefix": "OnRenderImage(RenderTexture, RenderTexture)",
 		"description": "OnRenderImage is called after all rendering is complete to render image.",
 		"body": [
-			"private void OnRenderImage(RenderTexture src, RenderTexture dest) {",
+			"protected void OnRenderImage(RenderTexture src, RenderTexture dest) {",
 			"\t$0",
 			"}"
 		]
@@ -585,7 +585,7 @@
 		"prefix": "OnRenderObject()",
 		"description": "OnRenderObject is called after camera has rendered the scene.",
 		"body": [
-			"private void OnRenderObject() {",
+			"protected void OnRenderObject() {",
 			"\t$0",
 			"}"
 		]
@@ -594,7 +594,7 @@
 		"prefix": "OnSerializeNetworkView(BitStream, NetworkMessageInfo)",
 		"description": "Used to customize synchronization of variables in a script watched by a network view.",
 		"body": [
-			"private void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info) {",
+			"protected void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info) {",
 			"\t$0",
 			"}"
 		]
@@ -603,7 +603,7 @@
 		"prefix": "OnServerInitialized()",
 		"description": "Called on the server whenever a Network.InitializeServer was invoked and has completed.",
 		"body": [
-			"private void OnServerInitialized() {",
+			"protected void OnServerInitialized() {",
 			"\t$0",
 			"}"
 		]
@@ -612,7 +612,7 @@
 		"prefix": "OnTransformChildrenChanged()",
 		"description": "Called when the list of children of the transform of the GameObject has changed.",
 		"body": [
-			"private void OnTransformChildrenChanged() {",
+			"protected void OnTransformChildrenChanged() {",
 			"\t$0",
 			"}"
 		]
@@ -621,7 +621,7 @@
 		"prefix": "OnTransformParentChanged()",
 		"description": "Called when the parent property of the transform of the GameObject has changed.",
 		"body": [
-			"private void OnTransformParentChanged() {",
+			"protected void OnTransformParentChanged() {",
 			"\t$0",
 			"}"
 		]
@@ -630,7 +630,7 @@
 		"prefix": "OnTriggerEnter(Collider)",
 		"description": "OnTriggerEnter is called when the Collider other enters the trigger.",
 		"body": [
-			"private void OnTriggerEnter(Collider other) {",
+			"protected void OnTriggerEnter(Collider other) {",
 			"\t$0",
 			"}"
 		]
@@ -639,7 +639,7 @@
 		"prefix": "OnTriggerEnter2D(Collider2D)",
 		"description": "Sent when another object enters a trigger collider attached to this object (2D physics only).",
 		"body": [
-			"private void OnTriggerEnter2D(Collider2D other) {",
+			"protected void OnTriggerEnter2D(Collider2D other) {",
 			"\t$0",
 			"}"
 		]
@@ -648,7 +648,7 @@
 		"prefix": "OnTriggerExit(Collider)",
 		"description": "OnTriggerExit is called when the Collider other has stopped touching the trigger.",
 		"body": [
-			"private void OnTriggerExit(Collider other) {",
+			"protected void OnTriggerExit(Collider other) {",
 			"\t$0",
 			"}"
 		]
@@ -657,7 +657,7 @@
 		"prefix": "OnTriggerExit2D(Collider2D)",
 		"description": "Sent when another object leaves a trigger collider attached to this object (2D physics only).",
 		"body": [
-			"private void OnTriggerExit2D(Collider2D other) {",
+			"protected void OnTriggerExit2D(Collider2D other) {",
 			"\t$0",
 			"}"
 		]
@@ -666,7 +666,7 @@
 		"prefix": "OnTriggerStay(Collider)",
 		"description": "OnTriggerStay is called once per frame for every Collider other that is touching the trigger.",
 		"body": [
-			"private void OnTriggerStay(Collider other) {",
+			"protected void OnTriggerStay(Collider other) {",
 			"\t$0",
 			"}"
 		]
@@ -675,7 +675,7 @@
 		"prefix": "OnTriggerStay2D(Collider2D)",
 		"description": "Sent each frame where another object is within a trigger collider attached to this object (2D physics only).",
 		"body": [
-			"private void OnTriggerStay2D(Collider2D other) {",
+			"protected void OnTriggerStay2D(Collider2D other) {",
 			"\t$0",
 			"}"
 		]
@@ -684,7 +684,7 @@
 		"prefix": "OnValidate()",
 		"description": "Called when the script is loaded or a value is changed in the inspector (Called in the editor only).",
 		"body": [
-			"private void OnValidate() {",
+			"protected void OnValidate() {",
 			"\t$0",
 			"}"
 		]
@@ -702,7 +702,7 @@
 		"prefix": "Reset()",
 		"description": "Reset is called when the user hits the Reset button in the Inspector's context menu or when adding the component the first time.",
 		"body": [
-			"private void Reset() {",
+			"protected void Reset() {",
 			"\t$0",
 			"}"
 		]
@@ -711,7 +711,7 @@
 		"prefix": "Start()",
 		"description": "Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.",
 		"body": [
-			"private void Start() {",
+			"protected void Start() {",
 			"\t$0",
 			"}"
 		]
@@ -720,11 +720,12 @@
 		"prefix": "Update()",
 		"description": "Update is called every frame, if the MonoBehaviour is enabled.",
 		"body": [
-			"private void Update() {",
+			"protected void Update() {",
 			"\t$0",
 			"}"
 		]
 	},
+	
 	"Debug Log": {
 		"prefix": "Log",
 		"description": "Unity Debug.Log() method",
