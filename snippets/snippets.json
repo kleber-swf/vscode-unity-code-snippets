@@ -1,4 +1,53 @@
 {
+	"ifs":{
+		"prefix": "ifc",
+		"description": "if custom",
+		"body": [
+			"if(${1:true}){",
+			"\t$0",
+			"}"
+		]
+	},
+	"ifec":{
+		"prefix": "ifec",
+		"description": "if custom",
+		"body": [
+			"if(${1:true}){",
+			"\t$0",
+			"}else{",
+			"\t",
+			"}"
+		]
+	},
+
+	"forc" : {
+		"prefix": "forc",
+		"description": "for custom",
+		"body": [
+			"for(int ${1:n} = 0; ${1} < ${2:length}; ${1}++){",
+			"\t$0",
+			"}"
+		]
+	},
+	"fori" : {
+		"prefix": "fori",
+		"description": "for i",
+		"body": [
+			"for(int i = 0; i < ${1:length}; i++){",
+			"\t$0",
+			"}"
+		]
+	},
+	"forj" : {
+		"prefix": "forj",
+		"description": "for j",
+		"body": [
+			"for(int j = 0; j < ${1:length}; j++){",
+			"\t$0",
+			"}"
+		]
+	},
+
 	"Unity MonoBehaviour": {
 		"prefix": "MonoBehaviour",
 		"description": "Unity MonoBehaviour class template.",
