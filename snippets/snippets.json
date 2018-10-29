@@ -1,5 +1,5 @@
 {
-	"ifs":{
+	"ifc":{
 		"prefix": "ifc",
 		"description": "if custom",
 		"body": [
@@ -10,7 +10,7 @@
 	},
 	"ifec":{
 		"prefix": "ifec",
-		"description": "if custom",
+		"description": "if else custom",
 		"body": [
 			"if(${1:true}){",
 			"\t$0",
