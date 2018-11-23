@@ -90,7 +90,7 @@
 			"",
 			"\tprivate void DrawListElement(Rect rect, int index, bool isActive, bool isFocused) {",
 			"\t\tvar item = _property.GetArrayElementAtIndex(index);",
-			"\t\tGUI.Label(rect, item.displayName);",
+			"\t\tEditorGUI.PropertyField(rect, item);",
 			"\t\t$0",
 			"\t}",
 			"",
@@ -908,7 +908,7 @@
 	},
 	"General class": {
 		"prefix": "class",
-		"description": "Creates a general class.",
+		"description": "Creates a normal class.",
 		"body": [
 			"public class ${TM_FILENAME_BASE} {",
 			"\t$0",
@@ -917,7 +917,7 @@
 	},
 	"General interface": {
 		"prefix": "interface",
-		"description": "Creates a general interface.",
+		"description": "Creates a normal interface.",
 		"body": [
 			"public interface ${TM_FILENAME_BASE} {",
 			"\t$0",

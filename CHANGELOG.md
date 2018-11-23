@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 	* Debug.LogWarningFormat()
 - General class and interface using file name
 - EditorWindow title
+- Editow with Reorderable List now uses EditorGUI.PropertyField
 
 ## [1.2.2] - 2018-07-23
 ### Added
