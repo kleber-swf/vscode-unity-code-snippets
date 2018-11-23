@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 	* Debug.LogErrorFormat()
 	* Debug.LogWarningFormat()
 - General class and interface using file name
+- EditorWindow title
 
 ## [1.2.2] - 2018-07-23
 ### Added
