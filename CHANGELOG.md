@@ -5,6 +5,28 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- MonoBehaviour messages:
+	* OnParticleSystemStopped()
+- StateMachineBehaviour messages:
+	* OnStateEnter()
+	* OnStateExit()
+	* OnStateIK()
+	* OnStateMove()
+	* OnStateUpdate()
+- Editor messages:
+	* OnSceneGUI()
+- EditorWindow messages:
+	* OnFocus()
+	* OnHierarchyChange()
+	* OnInspectorUpdate()
+	* OnLostFocus()
+	* OnProjectChange()
+	* OnSelectionChange()
+- ScriptableWizard messages:
+	* OnWizardCreate()
+	* OnWizardOtherButton()
+	* OnWizardUpdate()
 
 ## [1.2.2] - 2018-07-23
 ### Added
