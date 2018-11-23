@@ -903,5 +903,23 @@
 		"prefix": "LogWarningFormat",
 		"description": "Logs a formatted warning message to the Unity Console.",
 		"body": "Debug.LogWarningFormat($0);"
+	},
+	"General class": {
+		"prefix": "class",
+		"description": "Creates a general class.",
+		"body": [
+			"public class ${TM_FILENAME_BASE} {",
+			"\t$0",
+			"}"
+		]
+	},
+	"General interface": {
+		"prefix": "interface",
+		"description": "Creates a general interface.",
+		"body": [
+			"public interface ${TM_FILENAME_BASE} {",
+			"\t$0",
+			"}"
+		]
 	}
 }
