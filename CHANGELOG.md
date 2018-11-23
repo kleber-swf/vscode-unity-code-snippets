@@ -27,6 +27,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 	* OnWizardCreate()
 	* OnWizardOtherButton()
 	* OnWizardUpdate()
+- Debug methods:
+	* Debug.LogFormat()
+	* Debug.LogErrorFormat()
+	* Debug.LogWarningFormat()
 
 ## [1.2.2] - 2018-07-23
 ### Added

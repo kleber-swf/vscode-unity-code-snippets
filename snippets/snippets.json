@@ -871,22 +871,37 @@
 	},
 	"Debug Log": {
 		"prefix": "Log",
-		"description": "Unity Debug.Log() method",
+		"description": "Logs message to the Unity Console.",
 		"body": "Debug.Log($0);"
 	},
 	"Debug Log Error": {
 		"prefix": "LogError",
-		"description": "Unity Debug.LogError() method",
+		"description": "A variant of Debug.Log that logs an error message to the console.",
 		"body": "Debug.LogError($0);"
 	},
 	"Debug Log Warning": {
 		"prefix": "LogWarning",
-		"description": "Unity Debug.LogWarning() method",
+		"description": "A variant of Debug.Log that logs a warning message to the console.",
 		"body": "Debug.LogWarning($0);"
 	},
 	"Debug Log Exception": {
 		"prefix": "LogException",
-		"description": "Unity Debug.LogException() method",
+		"description": "A variant of Debug.Log that logs an error message from an exception to the console.",
 		"body": "Debug.LogException($0);"
+	},
+	"Debug LogFormat": {
+		"prefix": "LogFormat",
+		"description": "Logs a formatted message to the Unity Console.",
+		"body": "Debug.LogFormat($0);"
+	},
+	"Debug LogErrorFormat": {
+		"prefix": "LogErrorFormat",
+		"description": "Logs a formatted error message to the Unity console.",
+		"body": "Debug.LogErrorFormat($0);"
+	},
+	"Debug LogWarningFormat": {
+		"prefix": "LogWarningFormat",
+		"description": "Logs a formatted warning message to the Unity Console.",
+		"body": "Debug.LogWarningFormat($0);"
 	}
 }
