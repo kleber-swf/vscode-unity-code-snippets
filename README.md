@@ -3,7 +3,7 @@ Create Unity classes and methods easily.
 
 ## Features
 
-All Unity code snippets you need. This extension intends to be the complete collection of Unity snippets for Visual Studio Code.
+All the Unity code snippets you need. This extension intends to be the complete collection of Unity snippets for Visual Studio Code.
 
 It takes advantage of latest Visual Studio Code snippets features to create the code faster for you.
 
@@ -13,7 +13,7 @@ Create game classes like `MonoBehaviours`, `NetworkBehaviours` and `StateMachine
 ![MonoBehaviour](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-01.gif)
 
 ### Editor
-Create an Editor classes like `Editor`, `EditorWindow` and `PropertyDrawer` as easy as it can be.
+Create Editor classes like `Editor`, `EditorWindow` and `PropertyDrawer` as easy as it can be.
 
 ![Unity Editor](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-02.gif)
 
@@ -22,7 +22,7 @@ You never remember the property that goes with the `ScriptableObject` to create 
 
 ![ScriptableObject](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-03.gif)
 
-## Instalation
+## Installation
 
 As in any Visual Studio Code Extension you have several options to install:
 
@@ -121,8 +121,8 @@ Start typing the names to create the corresponding snippets.
 	* `Debug.LogWarning()` (type _`logwarning`_)
 	* `Debug.LogException()`  (type _`logexception`_)
 
-If you have any suggestions, [open an issue in the Github project](https://github.com/kleber-swf/vscode-unity-code-snippets/issues) page and I'll add it as soon as I can :).
+If you have any suggestions, [open an issue in the Github project](https://github.com/kleber-swf/vscode-unity-code-snippets/issues) page and I'll add them as soon as I can :).
 
 If you like the color theme of the previews, you can download it here: [Base16 Ocean Dark Extended Theme](https://marketplace.visualstudio.com/items?itemName=kleber-swf.ocean-dark-extended).
 
-Thanks you for downloading this extension.
+Thank you for downloading this extension.
