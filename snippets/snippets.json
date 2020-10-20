@@ -906,6 +906,16 @@
 		"description": "Logs a formatted warning message to the Unity Console.",
 		"body": "Debug.LogWarningFormat($0);"
 	},
+	"Debug DrawLine": {
+		"prefix": "DrawLine",
+		"description": "Draws a line between specified start and end points.",
+		"body": "Debug.DrawLine(Vector3 start$1, Vector3 end$2, Color color = Color.white$3, float duration = 0.0f$4, bool depthTest = true$5);"
+	},
+	"Debug DrawRay": {
+		"prefix": "DrawRay",
+		"description": "Draws a line from start to start + dir in world coordinates.",
+		"body": "Debug.DrawRay(Vector3 start$1, Vector3 dir$2, Color color = Color.white$3, float duration = 0.0f$4, bool depthTest = true$5);"
+	},
 	"General class": {
 		"prefix": "class",
 		"description": "Creates a normal class.",

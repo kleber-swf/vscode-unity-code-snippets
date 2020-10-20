@@ -115,6 +115,10 @@ Start typing the names to create the corresponding snippets.
 	* `Start()`
 	* `Update()`
 
+* Debug class
+	* `Debug.DrawLine()`
+	* `Debug.DrawRay()`
+
 * Some useful code snippets:
 	* `Debug.Log()` (type _`log`_)
 	* `Debug.LogError()` (type _`logerror`_)
