@@ -140,6 +140,13 @@
 			"}"
 		]
 	},
+	"Unity SerializeField": {
+		"prefix": "sf",
+		"body": [
+			"[SerializeField] private "
+		],
+		"description": "This field gets serialized even though it is private."
+	},
 	"Unity ScriptableWizard": {
 		"prefix": "ScriptableWizard",
 		"description": "Unity ScriptableWizard class template.",
@@ -716,13 +723,6 @@
 			"private void Reset() {",
 			"\t$0",
 			"}"
-		]
-	},
-	"SerializedField": {
-		"prefix": "sf",
-		"description": "Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.",
-		"body": [
-			"[SerializedField] private ",
 		]
 	},
 	"MonoBehaviour Start": {
