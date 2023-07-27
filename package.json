@@ -2,7 +2,8 @@
 	"name": "unity-code-snippets",
 	"displayName": "Unity Code Snippets",
 	"description": "All snippets you need for Unity3D development",
-	"version": "1.3.0",
+	"version": "2.0.0",
+	"publisher": "kleber-swf",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kleber-swf/vscode-unity-code-snippets"
@@ -16,9 +17,14 @@
 		"url": "https://github.com/kleber-swf/vscode-unity-code-snippets",
 		"email": "kleber.swf@gmail.com"
 	},
-	"publisher": "kleber-swf",
+	"homepage": "https://github.com/kleber-swf/vscode-unity-code-snippets",
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#b5bcca",
+		"theme": "light"
+	},
 	"engines": {
-		"vscode": "^1.17.0"
+		"vscode": "^1.80.0"
 	},
 	"categories": [
 		"Snippets"
@@ -28,15 +34,44 @@
 		"monobehaviour",
 		"csharp",
 		"gamedev",
-		"snippet"
+		"snippet",
+		"configurable",
+		"allman",
+		"k&r"
 	],
-	"homepage": "https://github.com/kleber-swf/vscode-unity-code-snippets",
-	"icon": "images/icon.png",
-	"galleryBanner": {
-		"color": "#b5bcca",
-		"theme": "light"
-	},
+	"files": [
+		"styles",
+		"snippets"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
 	"contributes": {
+		"configuration": [
+			{
+				"title": "Unity Code Snippets",
+				"properties": {
+					"unity-code-snippets.style": {
+						"type": "string",
+						"markdownDescription": "Select the [indentation style](https://en.wikipedia.org/wiki/Indentation_style) for the snippets",
+						"default": "kr",
+						"enum": [
+							"kr",
+							"allman"
+						],
+						"enumItemLabels": [
+							"K&R",
+							"Allman (C# Default)"
+						],
+						"markdownEnumDescriptions": [
+							"Formats using [K&R Style](https://en.wikipedia.org/wiki/Indentation_style#K&R_style)",
+							"Formats using [Allman Style](https://en.wikipedia.org/wiki/Indentation_style#Allman_style)"
+						]
+					}
+				}
+			}
+		],
 		"snippets": [
 			{
 				"language": "csharp",
@@ -45,6 +80,26 @@
 		]
 	},
 	"scripts": {
-		"build": "vsce package"
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"vsce:build": "vsce package",
+		"vsce:publish": "vsce publish"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.80.0",
+		"@types/glob": "^8.1.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "20.2.5",
+		"@typescript-eslint/eslint-plugin": "^5.59.8",
+		"@typescript-eslint/parser": "^5.59.8",
+		"eslint": "^8.41.0",
+		"glob": "^8.1.0",
+		"mocha": "^10.2.0",
+		"typescript": "^5.1.3",
+		"@vscode/test-electron": "^2.3.2"
 	}
 }
