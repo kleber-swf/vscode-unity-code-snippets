@@ -2,14 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+_The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)._
 
 ## [2.0.0] - 2023-06-27
 
 ### Added
 
--  **Configurable indentation style**. The long waited Allman style is here! Better than that, you can configure your indentation style with K&R (default) or Allman (Unity/C# default). K&R was kept as default due the 1.x behavior.
+-  🎉 **Configurable indentation style** 🎉. The long waited Allman style is here! Better than that, you can configure your indentation style with [K&R](https://en.wikipedia.org/wiki/Indentation_style#K&R_style) (default) or [Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) (Unity/C# default). K&R was kept as default due the 1.x behavior.
 -  New snippets:
    -  `[SerializeField]`. Suggested by [@Ferhattepe](https://github.com/Ferhattepe)
    -  `[RequireComponent]`. Suggested by [@lgarczyn](https://github.com/lgarczyn)
