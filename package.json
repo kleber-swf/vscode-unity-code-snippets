@@ -2,7 +2,7 @@
 	"name": "unity-code-snippets",
 	"displayName": "Unity Code Snippets",
 	"description": "All snippets you need for Unity3D development",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"publisher": "kleber-swf",
 	"repository": {
 		"type": "git",
@@ -68,6 +68,11 @@
 							"Formats using [K&R Style](https://en.wikipedia.org/wiki/Indentation_style#K&R_style)",
 							"Formats using [Allman Style](https://en.wikipedia.org/wiki/Indentation_style#Allman_style)"
 						]
+					},
+					"unity-code-snippets.usePrivateKeyword": {
+						"type": "boolean",
+						"markdownDescription": "Use `private` accessor keyword for private members",
+						"default": true
 					}
 				}
 			}
