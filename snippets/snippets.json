@@ -141,7 +141,7 @@
 		]
 	},
 	"Unity SerializeField": {
-		"prefix": "sf",
+		"prefix": "SerializeField",
 		"body": [
 			"[SerializeField] private "
 		],
