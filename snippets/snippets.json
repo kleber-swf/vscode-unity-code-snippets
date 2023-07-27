@@ -141,13 +141,6 @@
 			"}"
 		]
 	},
-	"Unity SerializeField": {
-		"prefix": "SerializeField",
-		"body": [
-			"[SerializeField] private "
-		],
-		"description": "This field gets serialized even though it is private."
-	},
 	"Unity ScriptableWizard": {
 		"prefix": "ScriptableWizard",
 		"description": "Unity ScriptableWizard class template.",
@@ -559,6 +552,11 @@
 		"prefix": "Update()",
 		"description": "Update is called every frame, if the MonoBehaviour is enabled.",
 		"body": ["private void Update() {", "\t$0", "}"]
+	},
+	"MonoBehaviour SerializeField": {
+		"prefix": "SerializeField",
+		"body": ["[SerializeField] private $0"],
+		"description": "Force Unity to serialize a private field."
 	},
 	"StateMachineBehaviour OnStateEnter": {
 		"prefix": "OnStateEnter()",

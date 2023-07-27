@@ -10,42 +10,43 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 -  **Configurable indentation style**. The long waited Allman style is here! Better than that, you can configure your indentation style with K&R (default) or Allman (Unity/C# default). K&R was kept as default due the 1.x behavior.
+-  `[SerializeField]` snippet. Suggested by [@Ferhattepe](https://github.com/Ferhattepe)
 
 ## [1.3.0] - 2018-11-18
 
 ### Added
 
 -  MonoBehaviour messages:
-   -  OnParticleSystemStopped()
+   -  `OnParticleSystemStopped()`
 -  StateMachineBehaviour messages:
-   -  OnStateEnter()
-   -  OnStateExit()
-   -  OnStateIK()
-   -  OnStateMove()
-   -  OnStateUpdate()
+   -  `OnStateEnter()`
+   -  `OnStateExit()`
+   -  `OnStateIK()`
+   -  `OnStateMove()`
+   -  `OnStateUpdate()`
 -  Editor messages:
-   -  OnSceneGUI()
+   -  `OnSceneGUI()`
 -  EditorWindow messages:
-   -  OnFocus()
-   -  OnHierarchyChange()
-   -  OnInspectorUpdate()
-   -  OnLostFocus()
-   -  OnProjectChange()
-   -  OnSelectionChange()
+   -  `OnFocus()`
+   -  `OnHierarchyChange()`
+   -  `OnInspectorUpdate()`
+   -  `OnLostFocus()`
+   -  `OnProjectChange()`
+   -  `OnSelectionChange()`
 -  ScriptableWizard messages:
-   -  OnWizardCreate()
-   -  OnWizardOtherButton()
-   -  OnWizardUpdate()
+   -  `OnWizardCreate()`
+   -  `OnWizardOtherButton()`
+   -  `OnWizardUpdate()`
 -  Debug methods:
-   -  Debug.LogFormat()
-   -  Debug.LogErrorFormat()
-   -  Debug.LogWarningFormat()
+   -  `Debug.LogFormat()`
+   -  `Debug.LogErrorFormat()`
+   -  `Debug.LogWarningFormat()`
 -  General class and interface using file name
 
 ### Changed
 
--  EditorWindow title
--  Editow with Reorderable List now uses EditorGUI.PropertyField
+-  `EditorWindow.title`
+-  `Editor` with `ReorderableList` now uses `EditorGUI.PropertyField`
 
 ## [1.2.2] - 2018-07-23
 
@@ -58,17 +59,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 -  Icon updated to be more visible at extensions panel inside VSCode
--  Readme updated: added a new usage gif - ScriptableObject
+-  Readme updated: added a new usage gif - `ScriptableObject`
 
 ### Fixed
 
--  Added private modifier to FixedUpdate method
+-  Added private modifier to `FixedUpdate` method
 
 ## [1.1.0] - 2017-11-17
 
 ### Fixed
 
--  Removed useless "using UnityEditor" inside ScriptableObject
+-  Removed useless `using UnityEditor` inside `ScriptableObject`
 
 ## [1.0.0] - 2017-10-10
 

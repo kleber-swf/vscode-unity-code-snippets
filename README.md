@@ -74,7 +74,7 @@ Start typing the names to create the corresponding snippets.
    -  `PropertyDrawer`
    -  `ScriptableWizard`
 
--  MonoBehaviour Methods:
+-  MonoBehaviour Methods/Fields:
 
    -  `Awake()`
    -  `FixedUpdate()`
@@ -139,6 +139,7 @@ Start typing the names to create the corresponding snippets.
    -  `Reset()`
    -  `Start()`
    -  `Update()`
+   -  `[SerializeField]`
 
 -  Debug class
 
