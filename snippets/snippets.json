@@ -141,6 +141,13 @@
 			"}"
 		]
 	},
+	"Unity SerializeField": {
+		"prefix": "SerializeField",
+		"body": [
+			"[SerializeField] private "
+		],
+		"description": "This field gets serialized even though it is private."
+	},
 	"Unity ScriptableWizard": {
 		"prefix": "ScriptableWizard",
 		"description": "Unity ScriptableWizard class template.",

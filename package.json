@@ -74,7 +74,7 @@
 		],
 		"snippets": [
 			{
-				"language": "csharp",
+				"language": ["cs", "csharp"],
 				"path": "./snippets/snippets.json"
 			}
 		]
