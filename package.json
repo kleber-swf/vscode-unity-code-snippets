@@ -68,6 +68,11 @@
 							"Formats using [K&R Style](https://en.wikipedia.org/wiki/Indentation_style#K&R_style)",
 							"Formats using [Allman Style](https://en.wikipedia.org/wiki/Indentation_style#Allman_style)"
 						]
+					},
+					"unity-code-snippets.usePrivateKeyword": {
+						"type": "boolean",
+						"markdownDescription": "Use `private` accessor keyword for private members",
+						"default": true
 					}
 				}
 			}
