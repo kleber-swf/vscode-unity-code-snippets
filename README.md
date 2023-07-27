@@ -69,12 +69,12 @@ Start typing the names to create the corresponding snippets.
 -  Editor Classes:
 
    -  `Editor`
-   -  `Editor with Reorderable List` **_(NEW)_**
+   -  `Editor` with `Reorderable List`
    -  `EditorWindow`
    -  `PropertyDrawer`
    -  `ScriptableWizard`
 
--  MonoBehaviour Methods/Fields:
+-  MonoBehaviour Methods:
 
    -  `Awake()`
    -  `FixedUpdate()`
@@ -139,9 +139,8 @@ Start typing the names to create the corresponding snippets.
    -  `Reset()`
    -  `Start()`
    -  `Update()`
-   -  `[SerializeField]`
 
--  Debug class
+-  Debug class:
 
    -  `Debug.DrawLine()`
    -  `Debug.DrawRay()`
@@ -151,6 +150,10 @@ Start typing the names to create the corresponding snippets.
    -  `Debug.LogError()` (type _`logerror`_)
    -  `Debug.LogWarning()` (type _`logwarning`_)
    -  `Debug.LogException()` (type _`logexception`_)
+   -  `[SerializeField]`
+   -  `[RequireComponent]`
+   -  Standard `class`
+   -  Standard `interface`
 
 If you have any suggestions, [open an issue in the Github project](https://github.com/kleber-swf/vscode-unity-code-snippets/issues) page and I'll add them as soon as I can :).
 

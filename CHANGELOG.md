@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 -  **Configurable indentation style**. The long waited Allman style is here! Better than that, you can configure your indentation style with K&R (default) or Allman (Unity/C# default). K&R was kept as default due the 1.x behavior.
--  `[SerializeField]` snippet. Suggested by [@Ferhattepe](https://github.com/Ferhattepe)
+-  New snippets:
+   -  `[SerializeField]`. Suggested by [@Ferhattepe](https://github.com/Ferhattepe)
+   -  `[RequireComponent]`. Suggested by [@lgarczyn](https://github.com/lgarczyn)
 
 ### Changed
 
