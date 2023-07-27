@@ -560,7 +560,7 @@
 	},
 	"MonoBehaviour RequireComponent": {
 		"prefix": "RequireComponent",
-		"body": ["[RequireComponent(typeof($0)]"],
+		"body": ["[RequireComponent(typeof($0))]"],
 		"description": "Automatically adds required components as dependencies."
 	},
 	"StateMachineBehaviour OnStateEnter": {
