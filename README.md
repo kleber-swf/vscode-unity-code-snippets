@@ -18,19 +18,19 @@ It takes advantage of latest Visual Studio Code snippets features to create the 
 
 Create game classes like `MonoBehaviours`, `NetworkBehaviours` and `StateMachineBehaviours` easily. Also create common methods like `Start()`, `Update()` or `OnTriggerEnter2D()` and log calls.
 
-![MonoBehaviour](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-01.gif)
+![MonoBehaviour](./images/doc/usage-01.gif)
 
 ### Editor
 
 Create Editor classes like `Editor`, `EditorWindow` and `PropertyDrawer` as easy as it can be.
 
-![Unity Editor](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-02.gif)
+![Unity Editor](./images/doc/usage-02.gif)
 
 ### ScriptableObject
 
 You never remember the property that goes with the `ScriptableObject` to create it via Unity create menu? Not a problem.
 
-![ScriptableObject](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/usage-03.gif)
+![ScriptableObject](./images/doc/usage-03.gif)
 
 ## Installation
 
@@ -49,11 +49,25 @@ Starting at version `2.0.0` the extension is configurable.
 
 To configure the extension, open VSCode Settings and search for "Unity Code Snippets". Note that after changing any of the settings, you need to restart VSCode to apply them to the snippets.
 
-Available options:
+### Style
 
--  **Style**: The [indentation style](https://en.wikipedia.org/wiki/Indentation_style) for the snippets. For now you can choose between [K&R](https://en.wikipedia.org/wiki/Indentation_style#K&R_style) (the default for 1.x version) and [Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) (default to C#/Unity). If you need a different one, please leave an issue or upvote an existing one at the [project issues bord](https://github.com/kleber-swf/vscode-unity-code-snippets/issues). Default: `K&R`.
+The [indentation style](https://en.wikipedia.org/wiki/Indentation_style) for the snippets. For now you can choose between [K&R](https://en.wikipedia.org/wiki/Indentation_style#K&R_style) (the default for 1.x version) and [Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) (default to C#/Unity). If you need a different one, please leave an issue or upvote an existing one at the [project issues bord](https://github.com/kleber-swf/vscode-unity-code-snippets/issues). Default: `K&R`.
 
--  **Use Private Keyword**: Adds the `private` accessor keyword to private members. Default: `true`.
+#### K&R style
+
+![K&R Indentation style](./images/doc/kr.png)
+
+#### Allman style
+
+![Allman Indentation style](./images/doc/allman.png)
+
+### Use Private Keyword
+
+Adds the `private` accessor keyword to private members. Default: `true`.
+
+#### No private keyword
+
+![No private keyword](./images/doc/no-private.png)
 
 ## All the snippets
 
