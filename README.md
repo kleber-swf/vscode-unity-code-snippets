@@ -54,15 +54,15 @@ Available options:
 -  **Style**: The [indentation style](https://en.wikipedia.org/wiki/Indentation_style) for the snippets. For now you can choose between [K&R](https://en.wikipedia.org/wiki/Indentation_style#K&R_style) (the default for 1.x version) and [Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) (default to C#/Unity). If you need a different one, please leave an issue or upvote an existing one at the [project issues bord](https://github.com/kleber-swf/vscode-unity-code-snippets/issues). Default: `K&R`.
 
    **K&R style**
-   ![K&R Indentation style](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/doc/kr.png)
+   ![K&R Indentation style](./images/doc/kr.png)
 
    **Allman style**
-   ![Allman Indentation style](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/doc/allman.png)
+   ![Allman Indentation style](./images/doc/allman.png)
 
 -  **Use Private Keyword**: Adds the `private` accessor keyword to private members. Default: `true`.
 
    **No private keyword**
-   ![No private keyword](https://raw.githubusercontent.com/kleber-swf/vscode-unity-code-snippets/master/images/doc/no-private.png)
+   ![No private keyword](./images/doc/no-private.png)
 
 ## All the snippets
 
