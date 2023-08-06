@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 _The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)._
 
-## [Unreleased]
+## [2.2.0] - 2023-08-06
 
 ### Added:
 
@@ -95,10 +95,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 -  :tada: Initial release
 
 [Unreleased]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/master
-[2.0.1]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/v2.0.1
-[2.0.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/v2.0.0
-[1.3.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/v1.3.0
-[1.2.2]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/v1.2.2
-[1.2.1]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/v1.2.1
-[1.1.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/v1.1.0
-[1.0.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/v1.0.0
+[2.2.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/2.2.0
+[2.1.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/tag/2.1.0
+[2.0.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/2.0.0
+[1.3.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/1.3.0
+[1.2.2]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/1.2.2
+[1.2.1]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/1.2.1
+[1.1.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/1.1.0
+[1.0.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/1.0.0
