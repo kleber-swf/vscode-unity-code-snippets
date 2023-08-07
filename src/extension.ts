@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import * as fs from 'fs/promises';
 import * as vscode from 'vscode';
 import { IndentationStyle, Options } from './options';
 
@@ -18,30 +18,24 @@ function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.Conf
 	if (!e.affectsConfiguration(EXT_ID)) { return; }
 	const conf = vscode.workspace.getConfiguration(EXT_ID);
 
-	const content = createSnippets(context, getOptions(conf));
-
-	// if (!content) {
-	// 	const error = `Invalid code style: ${style}`;
-	// 	console.error(error);
-	// 	vscode.window.showErrorMessage(error);
-	// 	return;
-	// }
-
-	saveSnippets(context, content);
-
-	vscode.window.showInformationMessage('Restart VSCode to apply the snippets', 'Restart')
-		.then(result => { if (result === 'Restart') { vscode.commands.executeCommand('workbench.action.reloadWindow'); } });
+	createSnippets(context, getOptions(conf))
+		// TODO check for errors
+		.then(content => saveSnippets(context, content))
+		.then(() => {
+			vscode.window.showInformationMessage('Restart VSCode to apply the snippets', 'Restart')
+				.then(result => { if (result === 'Restart') { vscode.commands.executeCommand('workbench.action.reloadWindow'); } });
+		});
 }
 
-function createSnippets(context: vscode.ExtensionContext, options: Options) {
+async function createSnippets(context: vscode.ExtensionContext, options: Options) {
 	const replace = parseOptions(options);
 
-	let result = {};
-	files.forEach(file => {
-		const content = replaceOnTemplate(context.asAbsolutePath(`styles/${file}.json`), replace);
-		result = Object.assign(result, JSON.parse(content));
-	});
+	const contents: string[] = await Promise.all(files.map(file =>
+		replaceOnTemplate(context.asAbsolutePath(`styles/${file}.json`), replace)
+	));
 
+	let result = {};
+	contents.forEach(content => result = Object.assign(result, JSON.parse(content)));
 	return JSON.stringify(result, null, '\t');
 }
 
@@ -70,14 +64,15 @@ function parseOptions(options: Options) {
 	return result;
 }
 
-function replaceOnTemplate(filePath: string, replace: Record<string, string>) {
-	const content = fs.readFileSync(filePath, { encoding: 'utf-8' });
+async function replaceOnTemplate(filePath: string, replace: Record<string, string>) {
+	// TODO check if file exists
+	const content = await fs.readFile(filePath, { encoding: 'utf-8' });
 	return content.replace(/\%(\w+)\%/gm, (_match: string, p1: string) => replace[p1] ?? p1);
 }
 
-function saveSnippets(context: vscode.ExtensionContext, content: string) {
+async function saveSnippets(context: vscode.ExtensionContext, content: string) {
 	const dest = context.asAbsolutePath(`snippets/snippets.json`);
-	fs.writeFile(dest, content, { encoding: 'utf-8' }, () => { });
+	return fs.writeFile(dest, content, { encoding: 'utf-8' });
 }
 
 export function deactivate() { }
