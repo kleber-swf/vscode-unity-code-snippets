@@ -1,0 +1,7 @@
+{
+	"MonoBehaviour SerializeField": {
+		"prefix": "SerializeField",
+		"body": ["[SerializeField] %PRIVATE%$0"],
+		"description": "Force Unity to serialize a %PRIVATE%field."
+	}
+}

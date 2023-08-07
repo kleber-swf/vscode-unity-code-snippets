@@ -4,7 +4,7 @@ import { DEST_PATH, EXT_ID, ISSUES_URL, Replaces, TEMPLATES_BASEPATH } from './m
 import { getReplaces } from './options';
 
 const TAG_REGEX = /\%(\w+)\%/gm;
-const TEMPLATES = ['classes', 'methods', 'calls'];
+const TEMPLATES = ['classes', 'methods', 'calls', 'attributes'];
 
 export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.workspace.onDidChangeConfiguration(e => onConfigurationChanged(context, e));
