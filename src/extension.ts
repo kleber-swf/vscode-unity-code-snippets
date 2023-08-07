@@ -1,13 +1,10 @@
 import * as fs from 'fs/promises';
 import * as vscode from 'vscode';
-import { DEST_PATH, EXT_ID, ISSUES_URL, IndentationStyle, Options, TEMPLATES_BASEPATH } from './model';
+import { DEST_PATH, EXT_ID, ISSUES_URL, Replaces, TEMPLATES_BASEPATH } from './model';
+import { getReplaces } from './options';
 
 const TAG_REGEX = /\%(\w+)\%/gm;
-const PRIVATE_REGEX_KEY = 'PRIVATE';
-const LINE_BREAK_REGEX_KEY = 'LINE_BREAK';
-const TAB_REGEX_KEY = 'TAB';
-
-const files = ['classes', 'methods', 'calls'];
+const TEMPLATES = ['classes', 'methods', 'calls'];
 
 export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.workspace.onDidChangeConfiguration(e => onConfigurationChanged(context, e));
@@ -18,7 +15,7 @@ function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.Conf
 	if (!e.affectsConfiguration(EXT_ID)) { return; }
 	const conf = vscode.workspace.getConfiguration(EXT_ID);
 
-	createSnippets(context, getOptions(conf))
+	createSnippets(context, getReplaces(conf))
 		.then(content => saveSnippets(context, content))
 		.then(() => {
 			vscode.window.showInformationMessage('Restart VSCode to apply the snippets', 'Restart')
@@ -27,11 +24,9 @@ function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.Conf
 		.catch(showError);
 }
 
-async function createSnippets(context: vscode.ExtensionContext, options: Options) {
-	const replace = parseOptions(options);
-
-	const contents: string[] = await Promise.all(files.map(file =>
-		replaceOnTemplate(context.asAbsolutePath(`${TEMPLATES_BASEPATH}/${file}.json`), replace)
+async function createSnippets(context: vscode.ExtensionContext, replaces: Replaces) {
+	const contents: string[] = await Promise.all(TEMPLATES.map(file =>
+		replaceOnTemplate(context.asAbsolutePath(`${TEMPLATES_BASEPATH}/${file}.json`), replaces)
 	));
 
 	let result = {};
@@ -39,36 +34,9 @@ async function createSnippets(context: vscode.ExtensionContext, options: Options
 	return JSON.stringify(result, null, '\t');
 }
 
-function getOptions(conf: vscode.WorkspaceConfiguration) {
-	return {
-		style: conf.get('style') as IndentationStyle,
-		usePrivateKeyword: conf.get('usePrivateKeyword') as boolean
-	};
-}
-
-function parseOptions(options: Options) {
-	const result: Record<string, string> = {};
-
-	// private keyword
-	result[PRIVATE_REGEX_KEY] = options.usePrivateKeyword ? 'private ' : '';
-
-	// indentation style
-	if (options.style === 'allman') {
-		result[LINE_BREAK_REGEX_KEY] = '",\n\t\t\t"';
-		result[TAB_REGEX_KEY] = '\\t';
-	} else if (options.style === 'kr') {
-		result[LINE_BREAK_REGEX_KEY] = ' ';
-		result[TAB_REGEX_KEY] = '';
-	} else {
-		throw new Error(`Invalid style: ${options.style}`);
-	}
-
-	return result;
-}
-
-async function replaceOnTemplate(filePath: string, replace: Record<string, string>) {
+async function replaceOnTemplate(filePath: string, replaces: Replaces) {
 	const content = await fs.readFile(filePath, { encoding: 'utf-8' });
-	return content.replace(TAG_REGEX, (_match: string, p1: string) => replace[p1] ?? p1);
+	return content.replace(TAG_REGEX, (_match: string, p1: string) => replaces[p1 as keyof Replaces] ?? p1);
 }
 
 async function saveSnippets(context: vscode.ExtensionContext, content: string) {
