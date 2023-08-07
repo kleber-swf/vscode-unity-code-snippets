@@ -1,5 +1,4 @@
 {
-	"$comment": "K&R",
 	"Unity MonoBehaviour": {
 		"prefix": "MonoBehaviour",
 		"description": "Unity MonoBehaviour class template.",
@@ -158,6 +157,16 @@
 			"\t}",
 			"}"
 		]
+	},
+	"General class": {
+		"prefix": "class",
+		"description": "Creates a standard class.",
+		"body": ["public class ${TM_FILENAME_BASE} {", "\t$0", "}"]
+	},
+	"General interface": {
+		"prefix": "interface",
+		"description": "Creates a standard interface.",
+		"body": ["public interface ${TM_FILENAME_BASE} {", "\t$0", "}"]
 	},
 	"MonoBehaviour Awake": {
 		"prefix": "Awake",
@@ -700,15 +709,5 @@
 		"prefix": "DrawRay",
 		"description": "Draws a line from start to start + dir in world coordinates.",
 		"body": "Debug.DrawRay(Vector3 start$1, Vector3 dir$2, Color color = Color.white$3, float duration = 0.0f$4, bool depthTest = true$5);"
-	},
-	"General class": {
-		"prefix": "class",
-		"description": "Creates a standard class.",
-		"body": ["public class ${TM_FILENAME_BASE} {", "\t$0", "}"]
-	},
-	"General interface": {
-		"prefix": "interface",
-		"description": "Creates a standard interface.",
-		"body": ["public interface ${TM_FILENAME_BASE} {", "\t$0", "}"]
 	}
 }

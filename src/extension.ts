@@ -1,12 +1,13 @@
 import * as fs from 'fs';
 import * as vscode from 'vscode';
+import { IndentationStyle, Options } from './options';
 
 const EXT_ID = 'unity-code-snippets';
 const PRIVATE_REGEX_KEY = 'PRIVATE';
 const LINE_BREAK_REGEX_KEY = 'LINE_BREAK';
 const TAB_REGEX_KEY = 'TAB';
 
-type IndentationStyle = 'kr' | 'allman';
+const files = ['classes', 'methods', 'calls'];
 
 export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.workspace.onDidChangeConfiguration(e => onConfigurationChanged(context, e));
@@ -17,16 +18,14 @@ function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.Conf
 	if (!e.affectsConfiguration(EXT_ID)) { return; }
 	const conf = vscode.workspace.getConfiguration(EXT_ID);
 
-	const style = conf.get('style') as IndentationStyle;
-	const usePrivateKeyword = conf.get('usePrivateKeyword') as boolean;
+	const content = createSnippets(context, getOptions(conf));
 
-	const content = createSnippets(context, style, usePrivateKeyword);
-	if (!content) {
-		const error = `Invalid code style: ${style}`;
-		console.error(error);
-		vscode.window.showErrorMessage(error);
-		return;
-	}
+	// if (!content) {
+	// 	const error = `Invalid code style: ${style}`;
+	// 	console.error(error);
+	// 	vscode.window.showErrorMessage(error);
+	// 	return;
+	// }
 
 	saveSnippets(context, content);
 
@@ -34,26 +33,45 @@ function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.Conf
 		.then(result => { if (result === 'Restart') { vscode.commands.executeCommand('workbench.action.reloadWindow'); } });
 }
 
-function createSnippets(context: vscode.ExtensionContext, style: IndentationStyle = 'kr', usePrivateKeyword = true) {
-	const src = context.asAbsolutePath(`styles/template.json`);
-	if (!fs.existsSync(src)) { return null; }
+function createSnippets(context: vscode.ExtensionContext, options: Options) {
+	const replace = parseOptions(options);
 
-	const replace: Record<string, string> = {};
+	let result = {};
+	files.forEach(file => {
+		const content = replaceOnTemplate(context.asAbsolutePath(`styles/${file}.json`), replace);
+		result = Object.assign(result, JSON.parse(content));
+	});
+
+	return JSON.stringify(result, null, '\t');
+}
+
+function getOptions(conf: vscode.WorkspaceConfiguration) {
+	return {
+		style: conf.get('style') as IndentationStyle,
+		usePrivateKeyword: conf.get('usePrivateKeyword') as boolean
+	};
+}
+
+function parseOptions(options: Options) {
+	const result: Record<string, string> = {};
 
 	// private keyword
-	replace[PRIVATE_REGEX_KEY] = usePrivateKeyword ? 'private ' : '';
+	result[PRIVATE_REGEX_KEY] = options.usePrivateKeyword ? 'private ' : '';
 
 	// indentation style
-	if (style === 'allman') {
-		replace[LINE_BREAK_REGEX_KEY] = '",\n\t\t\t"';
-		replace[TAB_REGEX_KEY] = '\\t';
+	if (options.style === 'allman') {
+		result[LINE_BREAK_REGEX_KEY] = '",\n\t\t\t"';
+		result[TAB_REGEX_KEY] = '\\t';
 	} else {
-		replace[LINE_BREAK_REGEX_KEY] = ' ';
-		replace[TAB_REGEX_KEY] = '';
+		result[LINE_BREAK_REGEX_KEY] = ' ';
+		result[TAB_REGEX_KEY] = '';
 	}
 
+	return result;
+}
 
-	const content = fs.readFileSync(src, { encoding: 'utf-8' });
+function replaceOnTemplate(filePath: string, replace: Record<string, string>) {
+	const content = fs.readFileSync(filePath, { encoding: 'utf-8' });
 	return content.replace(/\%(\w+)\%/gm, (_match: string, p1: string) => replace[p1] ?? p1);
 }
 
