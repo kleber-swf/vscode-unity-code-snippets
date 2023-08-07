@@ -2,6 +2,10 @@ import * as fs from 'fs';
 import * as vscode from 'vscode';
 
 const EXT_ID = 'unity-code-snippets';
+const PRIVATE_REGEX_KEY = 'PRIVATE';
+const LINE_BREAK_REGEX_KEY = 'LINE_BREAK';
+const TAB_REGEX_KEY = 'TAB';
+
 type IndentationStyle = 'kr' | 'allman';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -31,16 +35,26 @@ function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.Conf
 }
 
 function createSnippets(context: vscode.ExtensionContext, style: IndentationStyle = 'kr', usePrivateKeyword = true) {
-	const src = context.asAbsolutePath(`styles/${style}.json`);
+	const src = context.asAbsolutePath(`styles/template.json`);
 	if (!fs.existsSync(src)) { return null; }
 
-	const privateReplace = usePrivateKeyword ? 'private ' : '';
+	const replace: Record<string, string> = {};
+
+	// private keyword
+	replace[PRIVATE_REGEX_KEY] = usePrivateKeyword ? 'private ' : '';
+
+	// indentation style
+	if (style === 'allman') {
+		replace[LINE_BREAK_REGEX_KEY] = '",\n\t\t\t"';
+		replace[TAB_REGEX_KEY] = '\\t';
+	} else {
+		replace[LINE_BREAK_REGEX_KEY] = ' ';
+		replace[TAB_REGEX_KEY] = '';
+	}
+
 
 	const content = fs.readFileSync(src, { encoding: 'utf-8' });
-	return content.replace(/\%(\w+)\%/gm, (_match: string, p1: string) => {
-		if (p1 === 'PRIVATE') { return privateReplace; }
-		return p1;
-	});
+	return content.replace(/\%(\w+)\%/gm, (_match: string, p1: string) => replace[p1] ?? p1);
 }
 
 function saveSnippets(context: vscode.ExtensionContext, content: string) {
