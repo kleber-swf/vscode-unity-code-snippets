@@ -8,7 +8,11 @@ export type IndentationStyle = 'kr' | 'allman';
 export type ReplaceType = 'PRIVATE' | 'LINE_BREAK' | 'TAB';
 export type Replaces = Record<ReplaceType, string>;
 
+export const TEMPLATES = ['classes', 'methods', 'calls', 'attributes', 'experimentalAttributes'] as const;
+export type TemplateTypes = typeof TEMPLATES[number];
+export type AutoCompletes = Record<TemplateTypes, boolean>;
+
 export interface Options {
-	style: IndentationStyle;
-	usePrivateKeyword: boolean;
+	autoComplete: AutoCompletes;
+	replaces: Replaces;
 }

@@ -55,6 +55,7 @@
 					"unity-code-snippets.style": {
 						"type": "string",
 						"markdownDescription": "Select the [indentation style](https://en.wikipedia.org/wiki/Indentation_style) for the snippets",
+						"order": 0,
 						"default": "kr",
 						"enum": [
 							"kr",
@@ -71,8 +72,39 @@
 					},
 					"unity-code-snippets.usePrivateKeyword": {
 						"type": "boolean",
+						"order": 10,
 						"markdownDescription": "Use `private` accessor keyword for private members",
 						"default": true
+					},
+					"unity-code-snippets.autoComplete.classes": {
+						"type": "boolean",
+						"order": 100,
+						"markdownDescription": "Auto complete classes like `MonoBehaviour` and `Editor`.",
+						"default": true
+					},
+					"unity-code-snippets.autoComplete.methods": {
+						"type": "boolean",
+						"order": 110,
+						"markdownDescription": "Auto complete methods like `Start` and `OnCollisionEnter`.",
+						"default": true
+					},
+					"unity-code-snippets.autoComplete.calls": {
+						"type": "boolean",
+						"order": 120,
+						"markdownDescription": "Auto complete utility calls like `Debug.Log` and `Debug.DrawLine`.",
+						"default": true
+					},
+					"unity-code-snippets.autoComplete.attributes": {
+						"type": "boolean",
+						"order": 130,
+						"markdownDescription": "Auto complete attributes like `SerializeField`.",
+						"default": true
+					},
+					"unity-code-snippets.autoComplete.experimentalAttributes": {
+						"type": "boolean",
+						"order": 140,
+						"markdownDescription": "[Experimental] Auto complete all other attributes like `[HideInInspector]` and `[ContextMenu]`. There are a lot o attributes and this can pollute your Intellisense popup.",
+						"default": false
 					}
 				}
 			}

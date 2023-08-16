@@ -1,10 +1,9 @@
 import * as fs from 'fs/promises';
 import * as vscode from 'vscode';
-import { DEST_PATH, EXT_ID, ISSUES_URL, Replaces, TEMPLATES_BASEPATH } from './model';
-import { getReplaces } from './options';
+import { DEST_PATH, EXT_ID, ISSUES_URL, Options, Replaces, TEMPLATES, TEMPLATES_BASEPATH } from './model';
+import { parseOptions } from './options';
 
 const TAG_REGEX = /\%(\w+)\%/gm;
-const TEMPLATES = ['classes', 'methods', 'calls', 'attributes'];
 
 export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.workspace.onDidChangeConfiguration(e => onConfigurationChanged(context, e));
@@ -15,7 +14,7 @@ function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.Conf
 	if (!e.affectsConfiguration(EXT_ID)) { return; }
 	const conf = vscode.workspace.getConfiguration(EXT_ID);
 
-	createSnippets(context, getReplaces(conf))
+	createSnippets(context, parseOptions(conf))
 		.then(content => saveSnippets(context, content))
 		.then(() => {
 			vscode.window.showInformationMessage('Restart VSCode to apply the snippets', 'Restart')
@@ -24,10 +23,15 @@ function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.Conf
 		.catch(showError);
 }
 
-async function createSnippets(context: vscode.ExtensionContext, replaces: Replaces) {
-	const contents: string[] = await Promise.all(TEMPLATES.map(file =>
-		replaceOnTemplate(context.asAbsolutePath(`${TEMPLATES_BASEPATH}/${file}.json`), replaces)
-	));
+async function createSnippets(context: vscode.ExtensionContext, options: Options) {
+	const contents: string[] = await Promise.all(
+		TEMPLATES
+			.map(file =>
+				options.autoComplete[file]
+					? replaceOnTemplate(context.asAbsolutePath(`${TEMPLATES_BASEPATH}/${file}.json`), options.replaces)
+					: null)
+			.filter(e => e) as Promise<string>[]
+	);
 
 	let result = {};
 	contents.forEach(content => result = Object.assign(result, JSON.parse(content)));

@@ -1,34 +1,39 @@
 import * as vscode from 'vscode';
-import { IndentationStyle, Options, Replaces } from './model';
+import { AutoCompletes, IndentationStyle, Options, Replaces, TEMPLATES } from './model';
 
-export function getReplaces(conf: vscode.WorkspaceConfiguration): Replaces {
-	const options = getOptions(conf);
-	return parseOptions(options);
-}
-
-function getOptions(conf: vscode.WorkspaceConfiguration) {
+export function parseOptions(conf: vscode.WorkspaceConfiguration): Options {
 	return {
-		style: conf.get('style') as IndentationStyle,
-		usePrivateKeyword: conf.get('usePrivateKeyword') as boolean
+		autoComplete: parseAutoCompletes(conf),
+		replaces: parseReplaces(conf)
 	};
 }
 
-function parseOptions(options: Options): Replaces {
-	const result: Replaces = {} as any;
+function parseAutoCompletes(conf: vscode.WorkspaceConfiguration): AutoCompletes {
+	const c = conf.get('autoComplete') as AutoCompletes;
+	const autoCompletes = {} as unknown as AutoCompletes;
+	TEMPLATES.forEach(template => autoCompletes[template] = c[template] || false);
+	return autoCompletes;
+}
+
+function parseReplaces(conf: vscode.WorkspaceConfiguration): Replaces {
+	const style = conf.get('style') as IndentationStyle;
+	const usePrivateKeyword = conf.get('usePrivateKeyword') as boolean;
+
+	const replaces: Replaces = {} as any;
 
 	// private keyword
-	result.PRIVATE = options.usePrivateKeyword ? 'private ' : '';
+	replaces.PRIVATE = usePrivateKeyword ? 'private ' : '';
 
 	// indentation style
-	if (options.style === 'allman') {
-		result.LINE_BREAK = '",\n\t\t\t"';
-		result.TAB = '\\t';
-	} else if (options.style === 'kr') {
-		result.LINE_BREAK = ' ';
-		result.TAB = '';
+	if (style === 'allman') {
+		replaces.LINE_BREAK = '",\n\t\t\t"';
+		replaces.TAB = '\\t';
+	} else if (style === 'kr') {
+		replaces.LINE_BREAK = ' ';
+		replaces.TAB = '';
 	} else {
-		throw new Error(`Invalid style: ${options.style}`);
+		throw new Error(`Invalid style: ${style}`);
 	}
 
-	return result;
+	return replaces;
 }
