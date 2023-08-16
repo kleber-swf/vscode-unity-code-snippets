@@ -939,11 +939,93 @@
 		"description": "Draws a line from start to start + dir in world coordinates.",
 		"body": "Debug.DrawRay(Vector3 start$1, Vector3 dir$2, Color color = Color.white$3, float duration = 0.0f$4, bool depthTest = true$5);"
 	},
-	"MonoBehaviour SerializeField": {
-		"prefix": "SerializeField",
+	"Attribute: AddComponentMenu": {
+		"prefix": "AddComponentMenu",
 		"body": [
-			"[SerializeField] private $0"
+			"[AddComponentMenu(\"$0\")] private $1"
 		],
-		"description": "Force Unity to serialize a private field."
+		"description": "The AddComponentMenu attribute allows you to place a script anywhere in the \"Component\" menu, instead of just the \"Component->Scripts\" menu"
+	},
+	"Attribute: AssemblyIsEditorAssembly": {
+		"prefix": "AssemblyIsEditorAssembly",
+		"body": [
+			"[AssemblyIsEditorAssembly] private $0"
+		],
+		"description": "Assembly level attribute. Any classes in an assembly with this attribute will be considered to be Editor Classes."
+	},
+	"Attribute: BeforeRenderOrder": {
+		"prefix": "BeforeRenderOrder",
+		"body": [
+			"[BeforeRenderOrder($0)] private $1"
+		],
+		"description": "Use this BeforeRenderOrderAttribute when you need to specify a custom callback order for Application.onBeforeRender."
+	},
+	"Attribute: ColorUsage": {
+		"prefix": "ColorUsage",
+		"body": [
+			"[ColorUsage($0)] private $1"
+		],
+		"description": "Attribute used to configure the usage of the ColorField and Color Picker for a color."
+	},
+	"Attribute: ContextMenu": {
+		"prefix": "ContextMenu",
+		"body": [
+			"[ContextMenu(\"$2\")] private void $1 {",
+			"\t$0",
+			"}"
+		],
+		"description": "The ContextMenu attribute allows you to add commands to the context menu."
+	},
+	"Attribute: ContextMenuItem": {
+		"prefix": "ContextMenuItem",
+		"body": [
+			"[ContextMenuItem(\"$1\", \"$0\")]"
+		],
+		"description": "Use this attribute to add a context menu to a field that calls a named method."
+	},
+	"Attribute: CreateAssetMenu": {
+		"prefix": "CreateAssetMenu",
+		"body": [
+			"[CreateAssetMenu(\"$2\", \"$0\")] private $1"
+		],
+		"description": "Mark a ScriptableObject-derived type to be automatically listed in the Assets/Create submenu, so that instances of the type can be easily created and stored in the project as \".asset\" files."
+	},
+	"Attribute: CustomGridBrush": {
+		"prefix": "CustomGridBrush",
+		"body": [
+			"[CustomGridBrush]"
+		],
+		"description": "Attribute to define the class as a grid brush and to make it available in the palette window."
+	},
+	"": {},
+	"Attribute: FIELD": {
+		"prefix": "FIELD",
+		"body": [
+			"[FIELD] private $0"
+		],
+		"description": ""
+	},
+	"Attribute: FIELD_PARAM": {
+		"prefix": "FIELD_PARAM",
+		"body": [
+			"[FIELD_PARAM($0)] private $1"
+		],
+		"description": ""
+	},
+	"Attribute: CLASS": {
+		"prefix": "CLASS",
+		"body": [
+			"[CLASS]"
+		],
+		"description": ""
+	},
+	"Attribute: FUNCTION": {
+		"prefix": "FUNCTION",
+		"body": [
+			"[FUNCTION(\"$2\")] private void $1 {",
+			"\t$0",
+			"}"
+		],
+		"description": ""
 	}
 }
