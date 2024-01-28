@@ -1,0 +1,180 @@
+{
+	"Unity MonoBehaviour": {
+		"prefix": "MonoBehaviour",
+		"description": "Unity MonoBehaviour class template.",
+		"body": [
+			"using UnityEngine;",
+			"",
+			"public class ${TM_FILENAME_BASE} : MonoBehaviour%LINE_BREAK%{",
+			"\t$0",
+			"}"
+		]
+	},
+
+	"Unity StateMachineBehaviour": {
+		"prefix": "StateMachineBehaviour",
+		"description": "Unity StateMachineBehaviour class template.",
+		"body": [
+			"using UnityEngine;",
+			"",
+			"public class ${TM_FILENAME_BASE} : StateMachineBehaviour%LINE_BREAK%{",
+			"\tpublic override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)%LINE_BREAK%%TAB%{",
+			"\t\t$0",
+			"\t}",
+			"}"
+		]
+	},
+
+	"Unity NetworkBehaviour": {
+		"prefix": "NetworkBehaviour",
+		"description": "Unity NetworkBehaviour class template.",
+		"body": [
+			"using UnityEngine;",
+			"using UnityEngine.Networking;",
+			"",
+			"public class ${TM_FILENAME_BASE} : NetworkBehaviour%LINE_BREAK%{",
+			"\t$0",
+			"}"
+		]
+	},
+
+	"Unity ScriptableObject": {
+		"prefix": "ScriptableObject",
+		"description": "Unity ScriptableObject class template.",
+		"body": [
+			"using UnityEngine;",
+			"",
+			"[CreateAssetMenu(fileName = \"${1:${TM_FILENAME_BASE}}\", menuName = \"${2:${TM_FILEPATH/.*\\\\(.*)\\\\Assets\\\\.*/${1}/}/${TM_FILENAME_BASE}}\", order = ${3:0})]",
+			"public class ${TM_FILENAME_BASE} : ScriptableObject%LINE_BREAK%{",
+			"\t$0",
+			"}"
+		]
+	},
+
+	"Unity Editor": {
+		"prefix": "Editor",
+		"description": "Unity Editor class template.",
+		"body": [
+			"using UnityEngine;",
+			"using UnityEditor;",
+			"",
+			"[CustomEditor(typeof(${1:${TM_FILENAME_BASE/(.*)Editor/${1}/}}))]",
+			"public class ${TM_FILENAME_BASE} : Editor%LINE_BREAK%{",
+			"\tpublic override void OnInspectorGUI()%LINE_BREAK%%TAB%{",
+			"\t\tbase.OnInspectorGUI();",
+			"\t\t$0",
+			"\t}",
+			"}"
+		]
+	},
+
+	"Unity Editor with Reorderable List": {
+		"prefix": "EditorWithReorderableList",
+		"description": "Unity Editor class template with a ReorderableList.",
+		"body": [
+			"using UnityEngine;",
+			"using UnityEditor;",
+			"using UnityEditorInternal;",
+			"",
+			"[CustomEditor(typeof(${1:${TM_FILENAME_BASE/(.*)Editor/${1}/}}))]",
+			"public class ${TM_FILENAME_BASE} : Editor%LINE_BREAK%{",
+			"\t%PRIVATE%SerializedProperty _property;",
+			"\t%PRIVATE%ReorderableList _list;",
+			"",
+			"\t%PRIVATE%void OnEnable()%LINE_BREAK%%TAB%{",
+			"\t\t_property = serializedObject.FindProperty(\"${2}\");",
+			"\t\t_list = new ReorderableList(serializedObject, _property, true, true, true, true)%LINE_BREAK%%TAB%%TAB%{",
+			"\t\t\tdrawHeaderCallback = DrawListHeader,",
+			"\t\t\tdrawElementCallback = DrawListElement",
+			"\t\t};",
+			"\t}",
+			"",
+			"\t%PRIVATE%void DrawListHeader(Rect rect)%LINE_BREAK%%TAB%{",
+			"\t\tGUI.Label(rect, \"${2}\");",
+			"\t}",
+			"",
+			"\t%PRIVATE%void DrawListElement(Rect rect, int index, bool isActive, bool isFocused)%LINE_BREAK%%TAB%{",
+			"\t\tvar item = _property.GetArrayElementAtIndex(index);",
+			"\t\tEditorGUI.PropertyField(rect, item);",
+			"\t\t$0",
+			"\t}",
+			"",
+			"\tpublic override void OnInspectorGUI()%LINE_BREAK%%TAB%{",
+			"\t\tserializedObject.Update();",
+			"\t\tEditorGUILayout.Space();",
+			"\t\t_list.DoLayoutList();",
+			"\t\tserializedObject.ApplyModifiedProperties();",
+			"\t}",
+			"}"
+		]
+	},
+	"Unity EditorWindow": {
+		"prefix": "EditorWindow",
+		"description": "Unity EditorWindow class template.",
+		"body": [
+			"using UnityEngine;",
+			"using UnityEditor;",
+			"",
+			"public class ${TM_FILENAME_BASE} : EditorWindow%LINE_BREAK%{",
+			"\t[MenuItem(\"${1:${TM_FILEPATH/.*\\\\(.*)\\\\Assets\\\\.*/${1}/}/${TM_FILENAME_BASE/(.*)Editor/${1}/}}\")]",
+			"\t%PRIVATE%static void ShowWindow()%LINE_BREAK%%TAB%{",
+			"\t\tvar window = GetWindow<${TM_FILENAME_BASE}>();",
+			"\t\twindow.titleContent = new GUIContent(\"${2:${TM_FILENAME_BASE/(.*)Editor/${1}/}}\");",
+			"\t\twindow.Show();",
+			"\t}",
+			"",
+			"\t%PRIVATE%void OnGUI()%LINE_BREAK%%TAB%{",
+			"\t\t$0",
+			"\t}",
+			"}"
+		]
+	},
+
+	"Unity PropertyDrawer": {
+		"prefix": "PropertyDrawer",
+		"description": "Unity PropertyDrawer class template.",
+		"body": [
+			"using UnityEngine;",
+			"using UnityEditor;",
+			"",
+			"[CustomPropertyDrawer(typeof(${1:${TM_FILENAME_BASE/(.*)Drawer/${1}/}}))]",
+			"public class ${TM_FILENAME_BASE}: PropertyDrawer%LINE_BREAK%{",
+			"\tpublic override void OnGUI(Rect position, SerializedProperty property, GUIContent label)%LINE_BREAK%%TAB%{",
+			"\t\t$0",
+			"\t}",
+			"}"
+		]
+	},
+
+	"Unity ScriptableWizard": {
+		"prefix": "ScriptableWizard",
+		"description": "Unity ScriptableWizard class template.",
+		"body": [
+			"using UnityEngine;",
+			"using UnityEditor;",
+			"",
+			"public class ${TM_FILENAME_BASE}: ScriptableWizard%LINE_BREAK%{",
+			"\t[MenuItem(\"${1:${TM_FILEPATH/.*\\\\(.*)\\\\Assets\\\\.*/${1}/}/${TM_FILENAME_BASE/(.*)Wizard/${1}/}}\")]",
+			"\t%PRIVATE%static void MenuEntryCall()%LINE_BREAK%%TAB%{",
+			"\t\tDisplayWizard<${TM_FILENAME_BASE}>(\"${2:Title}\");",
+			"\t}",
+			"",
+			"\t%PRIVATE%void OnWizardCreate()%LINE_BREAK%%TAB%{",
+			"\t\t$0",
+			"\t}",
+			"}"
+		]
+	},
+
+	"General class": {
+		"prefix": "class",
+		"description": "Creates a standard class.",
+		"body": ["public class ${TM_FILENAME_BASE}%LINE_BREAK%{", "\t$0", "}"]
+	},
+
+	"General interface": {
+		"prefix": "interface",
+		"description": "Creates a standard interface.",
+		"body": ["public interface ${TM_FILENAME_BASE}%LINE_BREAK%{", "\t$0", "}"]
+	}
+}

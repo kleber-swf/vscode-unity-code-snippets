@@ -69,24 +69,48 @@ Adds the `private` accessor keyword to private members. Default: `true`.
 
 ![No private keyword](./images/doc/no-private.png)
 
+### Auto Complete: Classes
+
+Auto complete classes like `MonoBehaviour` and `Editor`.
+
+### Auto Complete: Methods
+
+Auto complete methods like `Start` and `OnCollisionEnter`.
+
+### Auto Complete: Calls
+
+Auto complete utility calls like `Debug.Log` and `Debug.DrawLine`.
+
+### Auto Complete: Attributes
+
+Auto complete attributes like `[SerializeField]` and `[RequireComponent]` (just these two for now).
+
+### Auto Complete: Experimental Attributes
+
+Auto complete all other attributes like `[HideInInspector]` and `[ContextMenu]`. There are a lot o attributes and this can pollute your Intellisense popup.
+
 ## All the snippets
 
-Start typing the names to create the corresponding snippets.
+Start typing the names to create the corresponding snippet. Some of them have a special snippet to not mess up with the default Intellisense behavior.
 
--  Game classes:
+Snippets are devided in categories, all of them can be enabled/disabled in the options.
 
-   -  `MonoBehaviour`
-   -  `StateMachineBehaviour`
-   -  `NetworkBehaviour`
-   -  `ScriptableObject`
+-  Classes:
 
--  Editor Classes:
-
-   -  `Editor`
-   -  `Editor` with `Reorderable List`
-   -  `EditorWindow`
-   -  `PropertyDrawer`
-   -  `ScriptableWizard`
+   -  Game Classes:
+      -  `MonoBehaviour`
+      -  `StateMachineBehaviour`
+      -  `NetworkBehaviour`
+      -  `ScriptableObject`
+   -  Editor Classes:
+      -  `Editor`
+      -  `EditorWithReorderableList`
+      -  `EditorWindow`
+      -  `PropertyDrawer`
+      -  `ScriptableWizard`
+   -  Standard Classes:
+      -  `class`
+      -  `interface`
 
 -  MonoBehaviour Methods:
 
@@ -117,9 +141,13 @@ Start typing the names to create the corresponding snippets.
    -  `OnEnable()`
    -  `OnFailedToConnect()`
    -  `OnFailedToConnectToMasterServer()`
+   -  `OnFocus()`
    -  `OnGUI()`
+   -  `OnHierarchyChange()`
+   -  `OnInspectorUpdate()`
    -  `OnJointBreak()`
    -  `OnJointBreak2D()`
+   -  `OnLostFocus()`
    -  `OnMasterServerEvent()`
    -  `OnMouseDown()`
    -  `OnMouseDrag()`
@@ -130,16 +158,25 @@ Start typing the names to create the corresponding snippets.
    -  `OnMouseUpAsButton()`
    -  `OnNetworkInstantiate()`
    -  `OnParticleCollision()`
+   -  `OnParticleSystemStopped()`
    -  `OnParticleTrigger()`
    -  `OnPlayerConnected()`
    -  `OnPlayerDisconnected()`
    -  `OnPostRender()`
    -  `OnPreCull()`
    -  `OnPreRender()`
+   -  `OnProjectChange()`
    -  `OnRenderImage()`
    -  `OnRenderObject()`
+   -  `OnSceneGUI()`
+   -  `OnSelectionChange()`
    -  `OnSerializeNetworkView()`
    -  `OnServerInitialized()`
+   -  `OnStateEnter()`
+   -  `OnStateExit()`
+   -  `OnStateIK()`
+   -  `OnStateMove()`
+   -  `OnStateUpdate()`
    -  `OnTransformChildrenChanged()`
    -  `OnTransformParentChanged()`
    -  `OnTriggerEnter()`
@@ -150,24 +187,87 @@ Start typing the names to create the corresponding snippets.
    -  `OnTriggerStay2D()`
    -  `OnValidate()`
    -  `OnWillRenderObject()`
+   -  `OnWizardCreate()`
+   -  `OnWizardOtherButton()`
+   -  `OnWizardUpdate()`
    -  `Reset()`
    -  `Start()`
    -  `Update()`
 
--  Debug class:
+-  Calls:
 
-   -  `Debug.DrawLine()`
-   -  `Debug.DrawRay()`
-
--  Some useful code snippets:
    -  `Debug.Log()` (type _`log`_)
    -  `Debug.LogError()` (type _`logerror`_)
-   -  `Debug.LogWarning()` (type _`logwarning`_)
    -  `Debug.LogException()` (type _`logexception`_)
-   -  `[SerializeField]`
+   -  `Debug.LogWarning()` (type _`logwarning`_)
+   -  `Debug.LogFormat()` (type _`logformat`_)
+   -  `Debug.LogErrorFormat()` (type _`logerrorformat`_)
+   -  `Debug.LogWarningFormat()` (type _`logwarningformat`_)
+   -  `Debug.DrawLine()` (type _`drawline`_)
+   -  `Debug.DrawRay()` (type _`drawray`_)
+
+-  Attributes:
+
+   -  `[SerializeField]` (type _`sfield`_)
    -  `[RequireComponent]`
-   -  Standard `class`
-   -  Standard `interface`
+
+-  Experimental snippets:
+   -  `[AddComponentMenu]`
+   -  `[AssemblyIsEditorAssembly]`
+   -  `[BeforeRenderOrder]`
+   -  `[CanEditMultipleObjects]`
+   -  `[ColorUsage]`
+   -  `[ContextMenu]`
+   -  `[ContextMenuItem]`
+   -  `[CreateAssetMenu]`
+   -  `[CustomEditor]`
+   -  `[CustomEditorForRenderPipeline]`
+   -  `[CustomGridBrush]`
+   -  `[CustomPreview]`
+   -  `[CustomPropertyDrawer]`
+   -  `[Delayed]`
+   -  `[DisallowMultipleComponent]`
+   -  `[DrawGizmo]`
+   -  `[EditorWindowTitle]`
+   -  `[ExcludeFromObjectFactory]`
+   -  `[ExcludeFromPreset]`
+   -  `[ExecuteAlways]`
+   -  `[ExecuteInEditMode]`
+   -  `[FilePath]`
+   -  `[GradientUsage]`
+   -  `[GUITarget]`
+   -  `[Header]`
+   -  `[HelpURL]`
+   -  `[HideInCallstack]`
+   -  `[HideInInspector]`
+   -  `[Icon]`
+   -  `[ImageEffectAfterScale]`
+   -  `[ImageEffectAllowedInSceneView]`
+   -  `[ImageEffectOpaque]`
+   -  `[ImageEffectTransformsToLDR]`
+   -  `[ImageEffectUsesCommandBuffer]`
+   -  `[InitializeOnEnterPlayMode]`
+   -  `[InitializeOnLoad]`
+   -  `[InitializeOnLoadMethod]`
+   -  `[InspectorName]`
+   -  `[InspectorOrder]`
+   -  `[LightingExplorerExtension]`
+   -  `[Localization]`
+   -  `[MenuItem]`
+   -  `[Min]`
+   -  `[Multiline]`
+   -  `[NonReorderable]`
+   -  `[PreferBinarySerialization]`
+   -  `[Range]`
+   -  `[RuntimeInitializeOnLoadMethod]`
+   -  `[SelectionBase]`
+   -  `[SerializeReference]`
+   -  `[SettingsProvider]`
+   -  `[SettingsProviderGroup]`
+   -  `[SharedBetweenAnimators]`
+   -  `[Space]`
+   -  `[TextArea]`
+   -  `[Tooltip]`
 
 If you have any suggestion, please don't give the extension a bad review. Instead, [open an issue in the Github project](https://github.com/kleber-swf/vscode-unity-code-snippets/issues) page and I'll try to add it when/if possible.
 
