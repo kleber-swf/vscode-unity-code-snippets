@@ -1,6 +1,6 @@
 {
 	"Attribute: SerializeField": {
-		"prefix": "SerializeField",
+		"prefix": "sfield",
 		"body": ["[SerializeField] %PRIVATE%$0;"],
 		"description": "Force Unity to serialize a private field."
 	}
