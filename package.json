@@ -2,7 +2,7 @@
 	"name": "unity-code-snippets",
 	"displayName": "Unity Code Snippets",
 	"description": "All snippets you need for Unity3D development",
-	"version": "2.2.5",
+	"version": "2.3.0",
 	"publisher": "kleber-swf",
 	"repository": {
 		"type": "git",
