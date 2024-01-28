@@ -124,7 +124,7 @@
 		"lint": "eslint src --ext ts",
 		"test": "node ./out/test/runTest.js",
 		"vsce:build": "vsce package",
-		"vsce:publish": "vsce publish"
+		"vsce:publish": "vsce publish; echo \"Don't forget to publish to https://open-vsx.org/\""
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.80.0",
