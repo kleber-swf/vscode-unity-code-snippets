@@ -21,6 +21,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 -  `[SerializeField]` snippet changed to `sfield` (#44)
 -  Several internal changes to better performance and maintainability
 
+### Fixed:
+
+-  `StateMachineBehaviour` class template indent fix (#43)
+
 ## [2.2.5] - 2023-08-06
 
 ### Changed:
