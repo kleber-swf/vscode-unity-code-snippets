@@ -97,7 +97,7 @@
 					"unity-code-snippets.autoComplete.attributes": {
 						"type": "boolean",
 						"order": 130,
-						"markdownDescription": "Auto complete attributes like `SerializeField`.",
+						"markdownDescription": "Auto complete attributes like `[SerializeField]` and `[RequireComponent]`.",
 						"default": true
 					},
 					"unity-code-snippets.autoComplete.experimentalAttributes": {
