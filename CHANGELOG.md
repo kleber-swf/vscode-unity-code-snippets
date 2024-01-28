@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 _The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)._
 
+## [Unreleased]
+
+### Added
+
+-  Options to choose what group of snippets the extension should suggest:
+   -  Classes
+   -  Methods
+   -  Calls
+   -  Attributes
+   -  Experimental attributes
+
+### Changed:
+
+-  `[SerializeField]` snippet changed to `sfield` (#44)
+-  Several internal changes to better performance and maintainability
+
 ## [2.2.5] - 2023-08-06
 
 ### Changed:
@@ -102,6 +118,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 -  :tada: Initial release
 
 [Unreleased]: https://github.com/kleber-swf/vscode-unity-code-snippets/tree/master
+[2.2.5]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/2.2.5
 [2.2.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/2.2.0
 [2.1.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/tag/2.1.0
 [2.0.0]: https://github.com/kleber-swf/vscode-unity-code-snippets/releases/2.0.0
