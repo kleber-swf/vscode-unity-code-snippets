@@ -21,7 +21,7 @@
 			"public class ${TM_FILENAME_BASE} : StateMachineBehaviour",
 			"{",
 			"\tpublic override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)",
-			"{",
+			"\t{",
 			"\t\t$0",
 			"\t}",
 			"}"
