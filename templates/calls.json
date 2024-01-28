@@ -1,0 +1,55 @@
+{
+	"Debug Log": {
+		"prefix": "Log",
+		"description": "Logs message to the Unity Console.",
+		"body": "Debug.Log($0);"
+	},
+
+	"Debug Log Error": {
+		"prefix": "LogError",
+		"description": "A variant of Debug.Log that logs an error message to the console.",
+		"body": "Debug.LogError($0);"
+	},
+
+	"Debug Log Warning": {
+		"prefix": "LogWarning",
+		"description": "A variant of Debug.Log that logs a warning message to the console.",
+		"body": "Debug.LogWarning($0);"
+	},
+
+	"Debug Log Exception": {
+		"prefix": "LogException",
+		"description": "A variant of Debug.Log that logs an error message from an exception to the console.",
+		"body": "Debug.LogException($0);"
+	},
+
+	"Debug LogFormat": {
+		"prefix": "LogFormat",
+		"description": "Logs a formatted message to the Unity Console.",
+		"body": "Debug.LogFormat($0);"
+	},
+
+	"Debug LogErrorFormat": {
+		"prefix": "LogErrorFormat",
+		"description": "Logs a formatted error message to the Unity console.",
+		"body": "Debug.LogErrorFormat($0);"
+	},
+
+	"Debug LogWarningFormat": {
+		"prefix": "LogWarningFormat",
+		"description": "Logs a formatted warning message to the Unity Console.",
+		"body": "Debug.LogWarningFormat($0);"
+	},
+
+	"Debug DrawLine": {
+		"prefix": "DrawLine",
+		"description": "Draws a line between specified start and end points.",
+		"body": "Debug.DrawLine(Vector3 start$1, Vector3 end$2, Color color = Color.white$3, float duration = 0.0f$4, bool depthTest = true$5);"
+	},
+
+	"Debug DrawRay": {
+		"prefix": "DrawRay",
+		"description": "Draws a line from start to start + dir in world coordinates.",
+		"body": "Debug.DrawRay(Vector3 start$1, Vector3 dir$2, Color color = Color.white$3, float duration = 0.0f$4, bool depthTest = true$5);"
+	}
+}

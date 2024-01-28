@@ -1,8 +1,9 @@
-import * as fs from 'fs';
+import * as fs from 'fs/promises';
 import * as vscode from 'vscode';
+import { DEST_PATH, EXT_ID, ISSUES_URL, Options, Replaces, TEMPLATES, TEMPLATES_BASEPATH } from './model';
+import { parseOptions } from './options';
 
-const EXT_ID = 'unity-code-snippets';
-type IndentationStyle = 'kr' | 'allman';
+const TAG_REGEX = /\%(\w+)\%/gm;
 
 export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.workspace.onDidChangeConfiguration(e => onConfigurationChanged(context, e));
@@ -13,39 +14,47 @@ function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.Conf
 	if (!e.affectsConfiguration(EXT_ID)) { return; }
 	const conf = vscode.workspace.getConfiguration(EXT_ID);
 
-	const style = conf.get('style') as IndentationStyle;
-	const usePrivateKeyword = conf.get('usePrivateKeyword') as boolean;
-
-	const content = createSnippets(context, style, usePrivateKeyword);
-	if (!content) {
-		const error = `Invalid code style: ${style}`;
-		console.error(error);
-		vscode.window.showErrorMessage(error);
-		return;
-	}
-
-	saveSnippets(context, content);
-
-	vscode.window.showInformationMessage('Restart VSCode to apply the snippets', 'Restart')
-		.then(result => { if (result === 'Restart') { vscode.commands.executeCommand('workbench.action.reloadWindow'); } });
+	createSnippets(context, parseOptions(conf))
+		.then(content => saveSnippets(context, content))
+		.then(() => {
+			vscode.window.showInformationMessage('Restart VSCode to apply the snippets', 'Restart')
+				.then(result => { if (result === 'Restart') { vscode.commands.executeCommand('workbench.action.reloadWindow'); } });
+		})
+		.catch(showError);
 }
 
-function createSnippets(context: vscode.ExtensionContext, style: IndentationStyle = 'kr', usePrivateKeyword = true) {
-	const src = context.asAbsolutePath(`styles/${style}.json`);
-	if (!fs.existsSync(src)) { return null; }
+async function createSnippets(context: vscode.ExtensionContext, options: Options) {
+	const contents: string[] = await Promise.all(
+		TEMPLATES
+			.map(file =>
+				options.autoComplete[file]
+					? replaceOnTemplate(context.asAbsolutePath(`${TEMPLATES_BASEPATH}/${file}.json`), options.replaces)
+					: null)
+			.filter(e => e) as Promise<string>[]
+	);
 
-	const privateReplace = usePrivateKeyword ? 'private ' : '';
-
-	const content = fs.readFileSync(src, { encoding: 'utf-8' });
-	return content.replace(/\%(\w+)\%/gm, (_match: string, p1: string) => {
-		if (p1 === 'PRIVATE') { return privateReplace; }
-		return p1;
-	});
+	let result = {};
+	contents.forEach(content => result = Object.assign(result, JSON.parse(content)));
+	return JSON.stringify(result, null, '\t');
 }
 
-function saveSnippets(context: vscode.ExtensionContext, content: string) {
-	const dest = context.asAbsolutePath(`snippets/snippets.json`);
-	fs.writeFile(dest, content, { encoding: 'utf-8' }, () => { });
+async function replaceOnTemplate(filePath: string, replaces: Replaces) {
+	const content = await fs.readFile(filePath, { encoding: 'utf-8' });
+	return content.replace(TAG_REGEX, (_match: string, p1: string) => replaces[p1 as keyof Replaces] ?? p1);
+}
+
+async function saveSnippets(context: vscode.ExtensionContext, content: string) {
+	const dest = context.asAbsolutePath(DEST_PATH);
+	return fs.writeFile(dest, content, { encoding: 'utf-8' });
+}
+
+function showError(e: any) {
+	console.error(e);
+	vscode.window.showErrorMessage(`Oh, no! An error has happened!\nPlease try to reinstall the extension and if this does not solve the issue, please report it on github: ${e.toString()}`, 'Open Extension', 'Report')
+		.then(res => {
+			if (res === 'Open Extension') { vscode.commands.executeCommand('extension.open', `kleber-swf.${EXT_ID}`); }
+			else if (res === 'Report') { vscode.env.openExternal(vscode.Uri.parse(ISSUES_URL)); }
+		});
 }
 
 export function deactivate() { }
