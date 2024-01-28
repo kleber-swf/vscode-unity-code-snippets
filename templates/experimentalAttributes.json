@@ -217,12 +217,6 @@
 		"description": ""
 	},
 
-	"Attribute: RequireComponent": {
-		"prefix": "RequireComponent",
-		"body": ["[RequireComponent(typeof($0)]"],
-		"description": "The RequireComponent attribute automatically adds required components as dependencies."
-	},
-
 	"Attribute: RuntimeInitializeOnLoadMethod": {
 		"prefix": "RuntimeInitializeOnLoadMethod",
 		"body": [
