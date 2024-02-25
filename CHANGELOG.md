@@ -18,12 +18,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed:
 
--  `[SerializeField]` snippet changed to `sfield` (#44)
+-  `[SerializeField]` snippet changed to `sfield` ([#44](https://github.com/kleber-swf/vscode-unity-code-snippets/issues/44))
 -  Several internal changes to better performance and maintainability
 
 ### Fixed:
 
--  `StateMachineBehaviour` class template indent fix (#43)
+-  `StateMachineBehaviour` class template indent fix ([#43](https://github.com/kleber-swf/vscode-unity-code-snippets/issues/43))
 
 ## [2.2.5] - 2023-08-06
 
