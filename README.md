@@ -18,19 +18,19 @@ It takes advantage of latest Visual Studio Code snippets features to create the 
 
 Create game classes like `MonoBehaviours`, `NetworkBehaviours` and `StateMachineBehaviours` easily. Also create common methods like `Start()`, `Update()` or `OnTriggerEnter2D()` and log calls.
 
-![MonoBehaviour](./images/doc/usage-01.gif)
+![MonoBehaviour](./images/usage-01.gif)
 
 ### Editor
 
 Create Editor classes like `Editor`, `EditorWindow` and `PropertyDrawer` as easy as it can be.
 
-![Unity Editor](./images/doc/usage-02.gif)
+![Unity Editor](./images/usage-02.gif)
 
 ### ScriptableObject
 
 You never remember the property that goes with the `ScriptableObject` to create it via Unity create menu? Not a problem.
 
-![ScriptableObject](./images/doc/usage-03.gif)
+![ScriptableObject](./images/usage-03.gif)
 
 ## Installation
 
@@ -55,11 +55,11 @@ The [indentation style](https://en.wikipedia.org/wiki/Indentation_style) for the
 
 #### K&R style
 
-![K&R Indentation style](./images/doc/kr.png)
+![K&R Indentation style](./images/kr.png)
 
 #### Allman style
 
-![Allman Indentation style](./images/doc/allman.png)
+![Allman Indentation style](./images/allman.png)
 
 ### Use Private Keyword
 
@@ -67,7 +67,7 @@ Adds the `private` accessor keyword to private members. Default: `true`.
 
 #### No private keyword
 
-![No private keyword](./images/doc/no-private.png)
+![No private keyword](./images/no-private.png)
 
 ### Auto Complete: Classes
 
