@@ -8,19 +8,35 @@ const TAG_REGEX = /\%(\w+)\%/gm;
 export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.workspace.onDidChangeConfiguration(e => onConfigurationChanged(context, e));
 	context.subscriptions.push(disposable);
+
+	const currentVersion = context.extension.packageJSON.version as string;
+	const lastVersion = context.globalState.get('version') as string ?? '0.0.0';
+	if (currentVersion === lastVersion) return;
+	updateSnippets(context).then(() =>
+		context.globalState.update('version', currentVersion)
+	);
 }
 
 function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.ConfigurationChangeEvent) {
-	if (!e.affectsConfiguration(EXT_ID)) { return; }
+	if (e.affectsConfiguration(EXT_ID)) updateSnippets(context);
+}
+
+async function updateSnippets(context: vscode.ExtensionContext): Promise<void> {
 	const conf = vscode.workspace.getConfiguration(EXT_ID);
 
-	createSnippets(context, parseOptions(conf))
-		.then(content => saveSnippets(context, content))
-		.then(() => {
-			vscode.window.showInformationMessage('Restart VSCode to apply the snippets', 'Restart')
-				.then(result => { if (result === 'Restart') { vscode.commands.executeCommand('workbench.action.reloadWindow'); } });
-		})
-		.catch(showError);
+	try {
+		const content = await createSnippets(context, parseOptions(conf));
+		await saveSnippets(context, content);
+		vscode.window.showInformationMessage('Restart VSCode to apply the snippets', 'Restart')
+			.then(result => {
+				if (result === 'Restart') {
+					vscode.commands.executeCommand('workbench.action.reloadWindow');
+				}
+			});
+	} catch (e) {
+		showError(e);
+		Promise.reject(e);
+	}
 }
 
 async function createSnippets(context: vscode.ExtensionContext, options: Options) {
