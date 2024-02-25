@@ -12,9 +12,8 @@ export function activate(context: vscode.ExtensionContext) {
 	const currentVersion = context.extension.packageJSON.version as string;
 	const lastVersion = context.globalState.get('version') as string ?? '0.0.0';
 	if (currentVersion === lastVersion) return;
-	updateSnippets(context).then(() =>
-		context.globalState.update('version', currentVersion)
-	);
+	updateSnippets(context)
+		.then(() => context.globalState.update('version', currentVersion));
 }
 
 function onConfigurationChanged(context: vscode.ExtensionContext, e: vscode.ConfigurationChangeEvent) {
