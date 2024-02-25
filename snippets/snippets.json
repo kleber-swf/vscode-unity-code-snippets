@@ -752,13 +752,6 @@
 			"}"
 		]
 	},
-	"MonoBehaviour RequireComponent": {
-		"prefix": "RequireComponent",
-		"body": [
-			"[RequireComponent(typeof($0))]"
-		],
-		"description": "Automatically adds required components as dependencies."
-	},
 	"StateMachineBehaviour OnStateEnter": {
 		"prefix": "OnStateEnter",
 		"description": "Called on the first Update frame when a statemachine evaluate this state.",
@@ -940,13 +933,17 @@
 		"body": "Debug.DrawRay(Vector3 start$1, Vector3 dir$2, Color color = Color.white$3, float duration = 0.0f$4, bool depthTest = true$5);"
 	},
 	"Attribute: SerializeField": {
-		"prefix": [
-			"SerializeField",
-			"sf"
-		],
+		"prefix": "sfield",
 		"body": [
 			"[SerializeField] private $0;"
 		],
 		"description": "Force Unity to serialize a private field."
+	},
+	"MonoBehaviour RequireComponent": {
+		"prefix": "RequireComponent",
+		"body": [
+			"[RequireComponent(typeof($0))]"
+		],
+		"description": "Automatically adds required components as dependencies."
 	}
 }
