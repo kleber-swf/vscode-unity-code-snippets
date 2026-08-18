@@ -82,6 +82,27 @@
 						"markdownDescription": "Auto complete classes like `MonoBehaviour` and `Editor`.",
 						"default": true
 					},
+					"unity-code-snippets.classAccessibilityLevel": {
+						"type": "string",
+						"markdownDescription": "Select the class accessibility levels.",
+						"order": 105,
+						"default": "public",
+						"enum": [
+							"public",
+							"internal",
+							"none"
+						],
+						"enumItemLabels": [
+							"public",
+							"internal",
+							"empty (internal)"
+						],
+						"markdownEnumDescriptions": [
+							"[Access is not restricted.](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/public)",
+							"[Access is limited to the current assembly.](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/internal)",
+							"Uses nothing which lets C# use the default [(internal)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/class) option."
+						]
+					},
 					"unity-code-snippets.autoComplete.methods": {
 						"type": "boolean",
 						"order": 110,

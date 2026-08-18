@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { AutoCompletes, IndentationStyle, Options, Replaces, TEMPLATES } from './model';
+import { AutoCompletes, ClassAccessibilityLevel, IndentationStyle, Options, Replaces, TEMPLATES } from './model';
 
 export function parseOptions(conf: vscode.WorkspaceConfiguration): Options {
 	return {
@@ -18,11 +18,15 @@ function parseAutoCompletes(conf: vscode.WorkspaceConfiguration): AutoCompletes 
 function parseReplaces(conf: vscode.WorkspaceConfiguration): Replaces {
 	const style = conf.get('style') as IndentationStyle;
 	const usePrivateKeyword = conf.get('usePrivateKeyword') as boolean;
+	const classAccessibilityLevelKeyword = conf.get('classAccessibilityLevel') as ClassAccessibilityLevel;
 
 	const replaces: Replaces = {} as any;
 
 	// private keyword
 	replaces.PRIVATE = usePrivateKeyword ? 'private ' : '';
+
+	// class accessibility level
+	replaces.CLASS_ACCESSIBILITY_LEVEL = classAccessibilityLevelKeyword === 'none' ? '' : `${classAccessibilityLevelKeyword} `;
 
 	// indentation style
 	if (style === 'allman') {
