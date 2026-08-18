@@ -5,7 +5,7 @@
 		"body": [
 			"using UnityEngine;",
 			"",
-			"public class ${TM_FILENAME_BASE} : MonoBehaviour%LINE_BREAK%{",
+			"%CLASS_DECLERATION% ${TM_FILENAME_BASE} : MonoBehaviour%LINE_BREAK%{",
 			"\t$0",
 			"}"
 		]
@@ -17,7 +17,7 @@
 		"body": [
 			"using UnityEngine;",
 			"",
-			"public class ${TM_FILENAME_BASE} : StateMachineBehaviour%LINE_BREAK%{",
+			"%CLASS_DECLERATION% ${TM_FILENAME_BASE} : StateMachineBehaviour%LINE_BREAK%{",
 			"\tpublic override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)%LINE_BREAK%%TAB%{",
 			"\t\t$0",
 			"\t}",
@@ -32,7 +32,7 @@
 			"using UnityEngine;",
 			"using UnityEngine.Networking;",
 			"",
-			"public class ${TM_FILENAME_BASE} : NetworkBehaviour%LINE_BREAK%{",
+			"%CLASS_DECLERATION% ${TM_FILENAME_BASE} : NetworkBehaviour%LINE_BREAK%{",
 			"\t$0",
 			"}"
 		]
@@ -45,7 +45,7 @@
 			"using UnityEngine;",
 			"",
 			"[CreateAssetMenu(fileName = \"${1:${TM_FILENAME_BASE}}\", menuName = \"${2:${TM_FILENAME_BASE}}\", order = ${3:0})]",
-			"public class ${TM_FILENAME_BASE} : ScriptableObject%LINE_BREAK%{",
+			"%CLASS_DECLERATION% ${TM_FILENAME_BASE} : ScriptableObject%LINE_BREAK%{",
 			"\t$0",
 			"}"
 		]
@@ -59,7 +59,7 @@
 			"using UnityEditor;",
 			"",
 			"[CustomEditor(typeof(${1:${TM_FILENAME_BASE/(.*)Editor/${1}/}}))]",
-			"public class ${TM_FILENAME_BASE} : Editor%LINE_BREAK%{",
+			"%CLASS_DECLERATION% ${TM_FILENAME_BASE} : Editor%LINE_BREAK%{",
 			"\tpublic override void OnInspectorGUI()%LINE_BREAK%%TAB%{",
 			"\t\tbase.OnInspectorGUI();",
 			"\t\t$0",
@@ -77,7 +77,7 @@
 			"using UnityEditorInternal;",
 			"",
 			"[CustomEditor(typeof(${1:${TM_FILENAME_BASE/(.*)Editor/${1}/}}))]",
-			"public class ${TM_FILENAME_BASE} : Editor%LINE_BREAK%{",
+			"%CLASS_DECLERATION% ${TM_FILENAME_BASE} : Editor%LINE_BREAK%{",
 			"\t%PRIVATE%SerializedProperty _property;",
 			"\t%PRIVATE%ReorderableList _list;",
 			"",
@@ -115,7 +115,7 @@
 			"using UnityEngine;",
 			"using UnityEditor;",
 			"",
-			"public class ${TM_FILENAME_BASE} : EditorWindow%LINE_BREAK%{",
+			"%CLASS_DECLERATION% ${TM_FILENAME_BASE} : EditorWindow%LINE_BREAK%{",
 			"\t[MenuItem(\"${1:${TM_FILEPATH/.*\\\\(.*)\\\\Assets\\\\.*/${1}/}/${TM_FILENAME_BASE/(.*)Editor/${1}/}}\")]",
 			"\t%PRIVATE%static void ShowWindow()%LINE_BREAK%%TAB%{",
 			"\t\tvar window = GetWindow<${TM_FILENAME_BASE}>();",
@@ -138,7 +138,7 @@
 			"using UnityEditor;",
 			"",
 			"[CustomPropertyDrawer(typeof(${1:${TM_FILENAME_BASE/(.*)Drawer/${1}/}}))]",
-			"public class ${TM_FILENAME_BASE}: PropertyDrawer%LINE_BREAK%{",
+			"%CLASS_DECLERATION% ${TM_FILENAME_BASE}: PropertyDrawer%LINE_BREAK%{",
 			"\tpublic override void OnGUI(Rect position, SerializedProperty property, GUIContent label)%LINE_BREAK%%TAB%{",
 			"\t\t$0",
 			"\t}",
@@ -153,7 +153,7 @@
 			"using UnityEngine;",
 			"using UnityEditor;",
 			"",
-			"public class ${TM_FILENAME_BASE}: ScriptableWizard%LINE_BREAK%{",
+			"%CLASS_DECLERATION% ${TM_FILENAME_BASE}: ScriptableWizard%LINE_BREAK%{",
 			"\t[MenuItem(\"${1:${TM_FILEPATH/.*\\\\(.*)\\\\Assets\\\\.*/${1}/}/${TM_FILENAME_BASE/(.*)Wizard/${1}/}}\")]",
 			"\t%PRIVATE%static void MenuEntryCall()%LINE_BREAK%%TAB%{",
 			"\t\tDisplayWizard<${TM_FILENAME_BASE}>(\"${2:Title}\");",
@@ -169,7 +169,7 @@
 	"General class": {
 		"prefix": "class",
 		"description": "Creates a standard class.",
-		"body": ["public class ${TM_FILENAME_BASE}%LINE_BREAK%{", "\t$0", "}"]
+		"body": ["%CLASS_DECLERATION% ${TM_FILENAME_BASE}%LINE_BREAK%{", "\t$0", "}"]
 	},
 
 	"General interface": {

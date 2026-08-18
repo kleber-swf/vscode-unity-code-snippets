@@ -4,8 +4,9 @@ export const DEST_PATH = 'snippets/snippets.json';
 export const ISSUES_URL = 'https://github.com/kleber-swf/vscode-unity-code-snippets/issues';
 
 export type IndentationStyle = 'kr' | 'allman';
+export type ClassAccessibilityLevel = 'public' | 'internal' | 'none';
 
-export type ReplaceType = 'PRIVATE' | 'LINE_BREAK' | 'TAB';
+export type ReplaceType = 'PRIVATE' | 'CLASS_DECLERATION' | 'LINE_BREAK' | 'TAB';
 export type Replaces = Record<ReplaceType, string>;
 
 export const TEMPLATES = ['classes', 'methods', 'calls', 'attributes', 'experimentalAttributes'] as const;
