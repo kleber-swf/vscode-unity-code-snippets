@@ -201,6 +201,13 @@ Snippets are devided in categories, all of them can be enabled/disabled in the o
    -  `Debug.LogWarningFormat()` (type _`logwarningformat`_)
    -  `Debug.DrawLine()` (type _`drawline`_)
    -  `Debug.DrawRay()` (type _`drawray`_)
+   -  `CancelInvoke()` (type _`cancelinvoke`_)
+   -  `Invoke()` (type _`invoke`_)
+   -  `InvokeRepeating()` (type _`invokerepeating`_)
+   -  `IsInvoking()` (type _`isinvoking`_)
+   -  `StartCoroutine()` (type _`startcoroutine`_)
+   -  `StopAllCoroutines()` (type _`stopallcoroutines`_)
+   -  `StopCoroutine()` (type _`stopcoroutine`_)
 
 -  Attributes:
 

@@ -51,5 +51,47 @@
 		"prefix": "DrawRay",
 		"description": "Draws a line from start to start + dir in world coordinates.",
 		"body": "Debug.DrawRay(Vector3 start$1, Vector3 dir$2, Color color = Color.white$3, float duration = 0.0f$4, bool depthTest = true$5);"
+	},
+
+	"MonoBehaviour CancelInvoke": {
+		"prefix": "CancelInvoke",
+		"description": "Cancels all Invoke calls on this MonoBehaviour.",
+		"body": "CancelInvoke();"
+	},
+
+	"MonoBehaviour Invoke": {
+		"prefix": "Invoke",
+		"description": "Invokes the method methodName in time seconds.",
+		"body": "Invoke(nameof($1), $2);"
+	},
+
+	"MonoBehaviour InvokeRepeating": {
+		"prefix": "InvokeRepeating",
+		"description": "Invokes the method methodName in time seconds, then repeatedly every repeatRate seconds.",
+		"body": "InvokeRepeating(nameof($1), $2, $3);"
+	},
+
+	"MonoBehaviour IsInvoking": {
+		"prefix": "IsInvoking",
+		"description": "Is any invoke on methodName pending?",
+		"body": "IsInvoking(nameof($0));"
+	},
+
+	"MonoBehaviour StartCoroutine": {
+		"prefix": "StartCoroutine",
+		"description": "Starts a Coroutine.",
+		"body": "StartCoroutine($0);"
+	},
+
+	"MonoBehaviour StopAllCoroutines": {
+		"prefix": "StopAllCoroutines",
+		"description": "Stops all coroutines running on this behaviour.",
+		"body": "StopAllCoroutines();"
+	},
+
+	"MonoBehaviour StopCoroutine": {
+		"prefix": "StopCoroutine",
+		"description": "Stops the first coroutine named methodName, or the coroutine stored in routine running on this behaviour.",
+		"body": "StopCoroutine($0);"
 	}
 }

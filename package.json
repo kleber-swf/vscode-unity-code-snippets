@@ -2,7 +2,7 @@
 	"name": "unity-code-snippets",
 	"displayName": "Unity Code Snippets",
 	"description": "All snippets you need for Unity3D development",
-	"version": "2.4.0",
+	"version": "2.5.0",
 	"publisher": "kleber-swf",
 	"repository": {
 		"type": "git",
@@ -13,6 +13,32 @@
 		"email": "kleber.swf@gmail.com",
 		"url": "http://kleber-swf.com"
 	},
+	"contributors": [
+		{
+			"name": "Ferhat TEPE",
+			"url": "https://github.com/Ferhattepe"
+		},
+		{
+			"name": "farukaygun",
+			"url": "https://github.com/farukaygun"
+		},
+		{
+			"name": "dmbfm",
+			"url": "https://github.com/dmbfm"
+		},
+		{
+			"name": "zoosewu",
+			"url": "https://github.com/zoosewu"
+		},
+		{
+			"name": "isnt3174",
+			"url": "https://github.com/isnt3174"
+		},
+		{
+			"name": "TD12734",
+			"url": "https://github.com/TD12734"
+		}
+	],
 	"bugs": {
 		"url": "https://github.com/kleber-swf/vscode-unity-code-snippets/issues",
 		"email": "kleber.swf@gmail.com"
