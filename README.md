@@ -37,7 +37,7 @@ You never remember the property that goes with the `ScriptableObject` to create 
 As in any Visual Studio Code Extension you have several options to install:
 
 -  Enter the Visual Studio Code Marketplace, search for _Unity Code Snippets_ (or enter directly on [the extension page](https://marketplace.visualstudio.com/items?itemName=kleber-swf.unity-code-snippets)) and click on _Install_ button.
--  Inside Visual Studio Code, enter in the Extensios panel, search for _Unity Code Snippets_ and click on _Install_ button
+-  Inside Visual Studio Code, enter in the Extensions panel, search for _Unity Code Snippets_ and click on _Install_ button.
 -  Run the following command in the Command Palette:
    ```
    ext install kleber-swf.unity-code-snippets
@@ -51,7 +51,7 @@ To configure the extension, open VSCode Settings and search for "Unity Code Snip
 
 ### Style
 
-The [indentation style](https://en.wikipedia.org/wiki/Indentation_style) for the snippets. For now you can choose between [K&R](https://en.wikipedia.org/wiki/Indentation_style#K&R_style) (the default for 1.x version) and [Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) (default to C#/Unity). If you need a different one, please leave an issue or upvote an existing one at the [project issues bord](https://github.com/kleber-swf/vscode-unity-code-snippets/issues). Default: `K&R`.
+The [indentation style](https://en.wikipedia.org/wiki/Indentation_style) for the snippets. For now you can choose between [K&R](https://en.wikipedia.org/wiki/Indentation_style#K&R_style) (the default for 1.x version) and [Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) (default to C#/Unity). If you need a different one, please leave an issue or upvote an existing one at the [project issues board](https://github.com/kleber-swf/vscode-unity-code-snippets/issues). Default: `K&R`.
 
 #### K&R style
 
@@ -269,7 +269,7 @@ Snippets are devided in categories, all of them can be enabled/disabled in the o
    -  `[TextArea]`
    -  `[Tooltip]`
 
-If you have any suggestion, please don't give the extension a bad review. Instead, [open an issue in the Github project](https://github.com/kleber-swf/vscode-unity-code-snippets/issues) page and I'll try to add it when/if possible.
+If you have any suggestion, please don't give the extension a bad review. Instead, [open an issue in the GitHub project](https://github.com/kleber-swf/vscode-unity-code-snippets/issues) page and I'll try to add it when/if possible.
 
 If you like the color theme of the previews, you can download it here: [Base16 Ocean Dark Extended Theme](https://marketplace.visualstudio.com/items?itemName=kleber-swf.ocean-dark-extended).
 
